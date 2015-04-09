@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55054F0A1AD61C9500E30BB1 /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
+		55054F0B1AD61C9500E30BB1 /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -14,9 +16,10 @@
 		558BFCDA1AD1B4FC0066E039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
 		558BFCDD1AD1B4FC0066E039 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCDB1AD1B4FC0066E039 /* LaunchScreen.xib */; };
 		558BFCE91AD1B4FD0066E039 /* ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCE81AD1B4FD0066E039 /* ChallengeTests.m */; };
-		558BFCFC1AD1B52B0066E039 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCFB1AD1B52B0066E039 /* ShareViewController.m */; };
+		558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */; };
 		558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */; };
 		558BFD011AD1B52B0066E039 /* Memory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 558BFCF61AD1B52B0066E039 /* Memory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		558BFD071AD1C0EE0066E039 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		55054F091AD61C9500E30BB1 /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_key.plist; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,9 +70,10 @@
 		558BFCE81AD1B4FD0066E039 /* ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeTests.m; sourceTree = "<group>"; };
 		558BFCF61AD1B52B0066E039 /* Memory.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Memory.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCF91AD1B52B0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		558BFCFA1AD1B52B0066E039 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		558BFCFB1AD1B52B0066E039 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		558BFCFA1AD1B52B0066E039 /* MMShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMShareViewController.h; sourceTree = "<group>"; };
+		558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMShareViewController.m; sourceTree = "<group>"; };
 		558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558BFD071AD1C0EE0066E039 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,7 @@
 		558BFCC01AD1B4FC0066E039 = {
 			isa = PBXGroup;
 			children = (
+				558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */,
 				558BFCCB1AD1B4FC0066E039 /* Challenge */,
 				558BFCE51AD1B4FD0066E039 /* ChallengeTests */,
 				558BFCF71AD1B52B0066E039 /* Memory */,
@@ -136,6 +143,7 @@
 			children = (
 				558BFCCD1AD1B4FC0066E039 /* Info.plist */,
 				558BFCCE1AD1B4FC0066E039 /* main.m */,
+				55054F091AD61C9500E30BB1 /* api_key.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,8 +168,8 @@
 		558BFCF71AD1B52B0066E039 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
-				558BFCFA1AD1B52B0066E039 /* ShareViewController.h */,
-				558BFCFB1AD1B52B0066E039 /* ShareViewController.m */,
+				558BFCFA1AD1B52B0066E039 /* MMShareViewController.h */,
+				558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
 				558BFCF81AD1B52B0066E039 /* Supporting Files */,
 			);
@@ -280,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558BFCD81AD1B4FC0066E039 /* Main.storyboard in Resources */,
+				55054F0A1AD61C9500E30BB1 /* api_key.plist in Resources */,
 				558BFCDD1AD1B4FC0066E039 /* LaunchScreen.xib in Resources */,
 				558BFCDA1AD1B4FC0066E039 /* Images.xcassets in Resources */,
 			);
@@ -297,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */,
+				55054F0B1AD61C9500E30BB1 /* api_key.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558BFCFC1AD1B52B0066E039 /* ShareViewController.m in Sources */,
+				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +549,7 @@
 				558BFCEE1AD1B4FD0066E039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		558BFCEF1AD1B4FD0066E039 /* Build configuration list for PBXNativeTarget "ChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +558,7 @@
 				558BFCF11AD1B4FD0066E039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		558BFD021AD1B52B0066E039 /* Build configuration list for PBXNativeTarget "Memory" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +567,7 @@
 				558BFD041AD1B52B0066E039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
