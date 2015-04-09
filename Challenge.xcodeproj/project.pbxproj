@@ -105,7 +105,6 @@
 		558BFCC01AD1B4FC0066E039 = {
 			isa = PBXGroup;
 			children = (
-				558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */,
 				558BFCCB1AD1B4FC0066E039 /* Challenge */,
 				558BFCE51AD1B4FD0066E039 /* ChallengeTests */,
 				558BFCF71AD1B52B0066E039 /* Memory */,
@@ -171,6 +170,7 @@
 				558BFCFA1AD1B52B0066E039 /* MMShareViewController.h */,
 				558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
+				55F0357D1AD62EB100C0D4ED /* Frameworks */,
 				558BFCF81AD1B52B0066E039 /* Supporting Files */,
 			);
 			path = Memory;
@@ -182,6 +182,14 @@
 				558BFCF91AD1B52B0066E039 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55F0357D1AD62EB100C0D4ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

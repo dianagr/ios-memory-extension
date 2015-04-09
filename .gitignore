@@ -17,6 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 api_key.plist
+.DS_Store
 
 # CocoaPods
 #
