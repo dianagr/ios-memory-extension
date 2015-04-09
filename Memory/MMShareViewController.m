@@ -24,15 +24,12 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
 - (void)viewDidLoad {
   [super viewDidLoad];
   NSExtensionItem *extensionItem = self.extensionContext.inputItems.firstObject;
-  NSItemProvider *itemProvider = extensionItem.attachments.firstObject;
-  NSLog(@"Item: %@, provider: %@", extensionItem, itemProvider);
   for (NSItemProvider *itemProvider in extensionItem.attachments) {
     if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypePlainText]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypePlainText options:nil completionHandler:^(NSString *item, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
           self.titleLabel.text = item;
         });
-        NSLog(@"Title = %@", item);
       }];
     } else if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypeURL]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *item, NSError *error) {

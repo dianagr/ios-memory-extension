@@ -9,6 +9,7 @@
 #import "CKSoundCloudRequest.h"
 
 #import "CKSoundCloud.h"
+#import "NSURL+CKUtils.h"
 
 @interface CKSoundCloudRequest ()
 @property (strong, nonatomic) NSURLSessionDataTask *task;
@@ -17,10 +18,7 @@
 @implementation CKSoundCloudRequest
 
 + (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(CKSoundCloudRequestCompletion)completion {
-  NSDictionary *appendedAuthParams = [self _appendAuthenticationParamsToQueryParams:params];
-  NSString *queryString = [self _queryStringAppendingAuthenticationFromParams:appendedAuthParams];
-  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@?%@", [CKSoundCloud host], path, queryString]];
-
+  NSURL *url = [NSURL URLWithHost:[CKSoundCloud host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
   CKSoundCloudRequest *request = [CKSoundCloudRequest new];
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     if (error) {
@@ -44,14 +42,6 @@
       completion(jsonResponse);
     });
   }
-}
-
-+ (NSString *)_queryStringAppendingAuthenticationFromParams:(NSDictionary *)params {
-  NSMutableArray *keyValues = [NSMutableArray array];
-  [params enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-    [keyValues addObject:[NSString stringWithFormat:@"%@=%@", key, value]];
-  }];
-  return [keyValues componentsJoinedByString:@"&"];
 }
 
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {

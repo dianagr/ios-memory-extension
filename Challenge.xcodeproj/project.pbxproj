@@ -34,6 +34,9 @@
 		55F035B51AD6393D00C0D4ED /* CKSoundCloudRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035B31AD6393D00C0D4ED /* CKSoundCloudRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F035B61AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */; };
 		55F035B71AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */; };
+		55F035BF1AD64FD100C0D4ED /* NSURL+CKUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */; };
+		55F035C01AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */; };
+		55F035C11AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,8 @@
 		55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSoundCloudResolveRequest.m; sourceTree = "<group>"; };
 		55F035B31AD6393D00C0D4ED /* CKSoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSoundCloudRequest.h; sourceTree = "<group>"; };
 		55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSoundCloudRequest.m; sourceTree = "<group>"; };
+		55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CKUtils.h"; sourceTree = "<group>"; };
+		55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CKUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +285,8 @@
 				55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */,
 				55F035AE1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h */,
 				55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */,
+				55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */,
+				55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */,
 				55F035851AD62F1000C0D4ED /* Supporting Files */,
 			);
 			path = ChallengeKit;
@@ -321,6 +328,7 @@
 				55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */,
 				55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */,
 				55F035B51AD6393D00C0D4ED /* CKSoundCloudRequest.h in Headers */,
+				55F035BF1AD64FD100C0D4ED /* NSURL+CKUtils.h in Headers */,
 				55F035B01AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F035C01AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */,
 				55F035B61AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
 				55F035B11AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
 				55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
@@ -558,6 +567,7 @@
 				55F035B21AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
 				55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */,
 				55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
+				55F035C11AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */,
 				55F035B71AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
