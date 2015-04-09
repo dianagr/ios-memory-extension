@@ -9,6 +9,7 @@
 #import "MMShareViewController.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <ChallengeKit/ChallengeKit.h>
 
 static const NSInteger kMMUIiewAnimationDuration = 0.2;
 
@@ -36,7 +37,7 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *item, NSError *error) {
         
         NSLog(@"URL = %@", item);
-        NSString *key = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"api_key" ofType:@"plist"]][@"client_id"];
+        NSString *key = [CKSoundCloud clientId];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.soundcloud.com/resolve?url=%@&client_id=%@", item, key]];
         [self _loadURL:url];
       }];

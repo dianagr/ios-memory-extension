@@ -26,6 +26,9 @@
 		55F0359A1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
 		55F0359B1AD62F1000C0D4ED /* ChallengeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		55F035A31AD62F1D00C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
+		55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
+		55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		55054F091AD61C9500E30BB1 /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_key.plist; sourceTree = "<group>"; };
+		55054F091AD61C9500E30BB1 /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = api_key.plist; path = ../Challenge/api_key.plist; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 		55F0358D1AD62F1000C0D4ED /* ChallengeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F035951AD62F1000C0D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeKitTests.m; sourceTree = "<group>"; };
+		55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSoundCloud.h; sourceTree = "<group>"; };
+		55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSoundCloud.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +212,6 @@
 			children = (
 				558BFCCD1AD1B4FC0066E039 /* Info.plist */,
 				558BFCCE1AD1B4FC0066E039 /* main.m */,
-				55054F091AD61C9500E30BB1 /* api_key.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -261,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				55F035871AD62F1000C0D4ED /* ChallengeKit.h */,
+				55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */,
+				55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */,
 				55F035851AD62F1000C0D4ED /* Supporting Files */,
 			);
 			path = ChallengeKit;
@@ -269,6 +275,7 @@
 		55F035851AD62F1000C0D4ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55054F091AD61C9500E30BB1 /* api_key.plist */,
 				55F035861AD62F1000C0D4ED /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -298,6 +305,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */,
 				55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */,
+				55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +729,7 @@
 		558BFD031AD1B52B0066E039 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -733,6 +744,7 @@
 		558BFD041AD1B52B0066E039 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				INFOPLIST_FILE = Memory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -743,6 +755,7 @@
 		55F0359D1AD62F1000C0D4ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -765,6 +778,7 @@
 		55F0359E1AD62F1000C0D4ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
