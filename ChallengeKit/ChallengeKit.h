@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char ChallengeKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <ChallengeKit/PublicHeader.h>
 
 #import <ChallengeKit/CKSoundCloud.h>
+#import <ChallengeKit/CKSoundCloudRequest.h>
+#import <ChallengeKit/CKSoundCloudResolveRequest.h>

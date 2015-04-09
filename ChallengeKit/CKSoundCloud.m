@@ -14,6 +14,8 @@
   return [self _apiAuthenticationCredentials][@"client_id"];
 }
 
+#pragma mark Private
+
 + (NSDictionary *)_apiAuthenticationCredentials {
   static NSDictionary *authCredentials = nil;
   static dispatch_once_t onceToken;

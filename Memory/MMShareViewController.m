@@ -35,11 +35,10 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
       }];
     } else if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypeURL]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *item, NSError *error) {
-        
-        NSLog(@"URL = %@", item);
-        NSString *key = [CKSoundCloud clientId];
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.soundcloud.com/resolve?url=%@&client_id=%@", item, key]];
-        [self _loadURL:url];
+        CKSoundCloudResolveRequest *request = [CKSoundCloudResolveRequest new];
+        [request loadWithPermalink:item completion:^(id response) {
+          NSLog(@"LOADED URL: %@", response);
+        }];
       }];
     }
   }
@@ -60,20 +59,6 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
     
     [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
   }];
-}
-
-- (void)_loadURL:(NSURL *)url {
-  NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    if (error) {
-      NSLog(@"Image loading error: %@", error.localizedDescription);
-      return;
-    } else {
-      NSError *jsonError;
-      NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-      NSLog(@"Data: %@", jsonResponse);
-    }
-  }];
-  [task resume];
 }
 
 @end
