@@ -10,6 +10,6 @@
 
 @interface CKSoundCloudResolveRequest : CKSoundCloudRequest
 
-- (void)loadWithPermalink:(NSURL *)permalink completion:(CKSoundCloudRequestCompletion)completion;
++ (instancetype)newRequestWithPermalink:(NSURL *)permalink completion:(CKSoundCloudRequestCompletion)completion;
 
 @end

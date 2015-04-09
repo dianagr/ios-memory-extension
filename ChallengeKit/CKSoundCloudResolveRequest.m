@@ -10,8 +10,8 @@
 
 @implementation CKSoundCloudResolveRequest
 
-- (void)loadWithPermalink:(NSURL *)permalink completion:(CKSoundCloudRequestCompletion)completion {
-  [self requestHTTPGetWithPath:@"resolve" params:@{ @"url": permalink } completion:completion];
++ (instancetype)newRequestWithPermalink:(NSURL *)permalink completion:(CKSoundCloudRequestCompletion)completion {
+  return [self newRequestGETWithPath:@"resolve" params:@{@"url": permalink} completion:completion];
 }
 
 @end
