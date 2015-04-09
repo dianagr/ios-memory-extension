@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j1y-V4-xli">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,12 +52,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsS-jD-ENu">
+                                <rect key="frame" x="79" y="24" width="505" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="VsS-jD-ENu" firstAttribute="baseline" secondItem="S4b-7B-ObQ" secondAttribute="firstBaseline" id="3RB-og-ghH"/>
+                            <constraint firstItem="VsS-jD-ENu" firstAttribute="leading" secondItem="S4b-7B-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="9QE-wH-qsY"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leading" id="E56-GW-kTq"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" id="JJf-Dq-1Xr"/>
+                            <constraint firstItem="VsS-jD-ENu" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" constant="4" id="YQz-m8-PYc"/>
+                            <constraint firstItem="VsS-jD-ENu" firstAttribute="baseline" secondItem="S4b-7B-ObQ" secondAttribute="baseline" id="drX-Mr-s6T"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="S4b-7B-ObQ" secondAttribute="bottom" constant="8" id="gIM-fA-XDv"/>
+                            <constraint firstItem="VsS-jD-ENu" firstAttribute="trailing" secondItem="wbc-yd-nQP" secondAttribute="trailingMargin" id="ilH-2d-9m1"/>
                             <constraint firstAttribute="trailing" secondItem="Mem-kN-pK3" secondAttribute="trailing" id="iuY-db-Zac"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" id="t3d-8r-PeN"/>
                             <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="Mem-kN-pK3" secondAttribute="bottom" id="uaS-Uy-bnf"/>
@@ -63,6 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="S4b-7B-ObQ" id="fzI-aK-m01"/>
+                        <outlet property="titleLabel" destination="VsS-jD-ENu" id="fF7-6M-KAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEy-Cv-SGf" userLabel="First Responder" sceneMemberID="firstResponder"/>

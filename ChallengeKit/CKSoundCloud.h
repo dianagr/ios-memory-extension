@@ -12,4 +12,8 @@
 
 + (NSString *)clientId;
 
++ (NSString *)clientIdKey;
+
++ (NSString *)host;
+
 @end

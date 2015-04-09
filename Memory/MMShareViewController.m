@@ -15,6 +15,7 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
 
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -29,7 +30,7 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
     if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypePlainText]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypePlainText options:nil completionHandler:^(NSString *item, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-          self.title = item;
+          self.titleLabel.text = item;
         });
         NSLog(@"Title = %@", item);
       }];
@@ -56,7 +57,6 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
   [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
     self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
   } completion:^(BOOL finished) {
-    
     [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
   }];
 }

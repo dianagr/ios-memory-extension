@@ -10,11 +10,11 @@
 
 @implementation CKSoundCloud
 
-+ (NSString *)clientId {
-  return [self _apiAuthenticationCredentials][@"client_id"];
++ (NSString *)host {
+  return @"https://api.soundcloud.com";
 }
 
-#pragma mark Private
+#pragma mark Client Id
 
 + (NSDictionary *)_apiAuthenticationCredentials {
   static NSDictionary *authCredentials = nil;
@@ -23,6 +23,16 @@
     authCredentials = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"api_key" ofType:@"plist"]];
   });
   return authCredentials;
+}
+
+#pragma mark API fields
+
++ (NSString *)clientId {
+  return [self _apiAuthenticationCredentials][[self clientIdKey]];
+}
+
++ (NSString *)clientIdKey {
+  return @"client_id";
 }
 
 @end

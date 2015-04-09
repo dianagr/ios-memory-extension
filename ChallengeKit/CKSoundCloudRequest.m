@@ -19,7 +19,7 @@
 + (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(CKSoundCloudRequestCompletion)completion {
   NSDictionary *appendedAuthParams = [self _appendAuthenticationParamsToQueryParams:params];
   NSString *queryString = [self _queryStringAppendingAuthenticationFromParams:appendedAuthParams];
-  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@?%@", [self _host], path, queryString]];
+  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@?%@", [CKSoundCloud host], path, queryString]];
 
   CKSoundCloudRequest *request = [CKSoundCloudRequest new];
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -33,10 +33,6 @@
 }
 
 #pragma mark Private
-
-+ (NSString *)_host {
-  return @"https://api.soundcloud.com";
-}
 
 + (void)_handleData:(NSData *)data completion:(CKSoundCloudRequestCompletion)completion {
   NSError *jsonError;
@@ -61,7 +57,7 @@
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {
   NSMutableDictionary *params = [queryParams mutableCopy];
   if ([CKSoundCloud clientId]) {
-    params[@"client_id"] = [CKSoundCloud clientId];
+    params[[CKSoundCloud clientIdKey]] = [CKSoundCloud clientId];
   }
   return params;
 }
