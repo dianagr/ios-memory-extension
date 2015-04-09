@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55054F0A1AD61C9500E30BB1 /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
-		55054F0B1AD61C9500E30BB1 /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -29,6 +27,7 @@
 		55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
 		55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
+		55F035AD1AD636B600C0D4ED /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -462,7 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				558BFCD81AD1B4FC0066E039 /* Main.storyboard in Resources */,
-				55054F0A1AD61C9500E30BB1 /* api_key.plist in Resources */,
 				558BFCDD1AD1B4FC0066E039 /* LaunchScreen.xib in Resources */,
 				558BFCDA1AD1B4FC0066E039 /* Images.xcassets in Resources */,
 			);
@@ -480,7 +478,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */,
-				55054F0B1AD61C9500E30BB1 /* api_key.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F035AD1AD636B600C0D4ED /* api_key.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
