@@ -21,28 +21,25 @@
   NSURL *url = [NSURL URLWithHost:[CKSoundCloud host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
   CKSoundCloudRequest *request = [CKSoundCloudRequest new];
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSJSONSerialization *jsonResponse = nil;
     if (error) {
       NSLog(@"Error loading data: %@", error.localizedDescription);
     } else {
-      [self _handleData:data completion:completion];
+      jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+      if (error) {
+        NSLog(@"Error parsin json: %@", error.localizedDescription);
+      }
+    }
+    if (completion) {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        completion(jsonResponse, error);
+      });
     }
   }];
   return request;
 }
 
 #pragma mark Private
-
-+ (void)_handleData:(NSData *)data completion:(CKSoundCloudRequestCompletion)completion {
-  NSError *jsonError;
-  NSJSONSerialization *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-  if (jsonError) {
-    NSLog(@"Error parsing json: %@", jsonError.localizedDescription);
-  } else if (completion) {
-    dispatch_async(dispatch_get_main_queue(), ^{
-      completion(jsonResponse);
-    });
-  }
-}
 
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {
   NSMutableDictionary *params = [queryParams mutableCopy];

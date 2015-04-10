@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^CKSoundCloudRequestCompletion)(id response);
+typedef void(^CKSoundCloudRequestCompletion)(id response, NSError *error);
 
 @interface CKSoundCloudRequest : NSObject
 

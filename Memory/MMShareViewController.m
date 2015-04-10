@@ -33,7 +33,7 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
       }];
     } else if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypeURL]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *item, NSError *error) {
-        CKSoundCloudResolveRequest *request = [CKSoundCloudResolveRequest newRequestWithPermalink:item completion:^(id response) {
+        CKSoundCloudResolveRequest *request = [CKSoundCloudResolveRequest newRequestWithPermalink:item completion:^(id response, NSError *requestError) {
           NSLog(@"LOADED URL: %@", response);
         }];
         [request resume];
