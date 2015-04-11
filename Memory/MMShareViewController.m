@@ -8,6 +8,8 @@
 
 #import "MMShareViewController.h"
 
+#import "MMCollectionViewController.h"
+
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <ChallengeKit/ChallengeKit.h>
 
@@ -16,7 +18,8 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) MMCollectionViewController *collectionViewController;
 @end
 
 @implementation MMShareViewController
@@ -40,6 +43,8 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
       }];
     }
   }
+  self.collectionView.dataSource = self.collectionViewController;
+  self.collectionView.delegate = self.collectionViewController;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,6 +53,13 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
   [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
     self.view.transform = CGAffineTransformIdentity;
   }];
+}
+
+- (MMCollectionViewController *)collectionViewController {
+  if (!_collectionViewController) {
+    _collectionViewController = [MMCollectionViewController new];
+  }
+  return _collectionViewController;
 }
 
 - (IBAction)didTapCancel:(UIButton *)sender {

@@ -18,6 +18,9 @@
 		558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */; };
 		558BFD011AD1B52B0066E039 /* Memory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 558BFCF61AD1B52B0066E039 /* Memory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		558BFD071AD1C0EE0066E039 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */; };
+		55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */; };
+		55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */; };
+		55D328451AD9B31900DC0311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
 		55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035871AD62F1000C0D4ED /* ChallengeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F0358E1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
 		55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */; };
@@ -123,6 +126,10 @@
 		558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMShareViewController.m; sourceTree = "<group>"; };
 		558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		55D3283F1AD9ACD600DC0311 /* MMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionViewCell.h; sourceTree = "<group>"; };
+		55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewCell.m; sourceTree = "<group>"; };
+		55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionViewController.h; sourceTree = "<group>"; };
+		55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewController.m; sourceTree = "<group>"; };
 		55F035831AD62F1000C0D4ED /* ChallengeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChallengeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F035861AD62F1000C0D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F035871AD62F1000C0D4ED /* ChallengeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeKit.h; sourceTree = "<group>"; };
@@ -252,6 +259,10 @@
 			children = (
 				558BFCFA1AD1B52B0066E039 /* MMShareViewController.h */,
 				558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */,
+				55D3283F1AD9ACD600DC0311 /* MMCollectionViewCell.h */,
+				55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */,
+				55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */,
+				55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
 				55F0357D1AD62EB100C0D4ED /* Frameworks */,
 				558BFCF81AD1B52B0066E039 /* Supporting Files */,
@@ -502,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */,
+				55D328451AD9B31900DC0311 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +557,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */,
+				55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */,
 				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -900,6 +914,7 @@
 				55F0359E1AD62F1000C0D4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55F035A01AD62F1000C0D4ED /* Build configuration list for PBXNativeTarget "ChallengeKitTests" */ = {
 			isa = XCConfigurationList;
@@ -908,6 +923,7 @@
 				55F035A21AD62F1000C0D4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
