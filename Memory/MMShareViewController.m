@@ -8,6 +8,7 @@
 
 #import "MMShareViewController.h"
 
+#import "MMCollectionViewCell.h"
 #import "MMCollectionViewController.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -45,6 +46,7 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
   }
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
+  [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

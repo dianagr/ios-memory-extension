@@ -8,26 +8,37 @@
 
 #import "MMCollectionViewCell.h"
 
+static const CGFloat kDefaultCornerRadius = 4;
+static const CGFloat kDefaultBorderWidth = 0.5;
+
 @interface MMCollectionViewCell ()
-@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *backImageView;
 @end
 
 @implementation MMCollectionViewCell
 
-- (void)awakeFromNib {
-  [super awakeFromNib];
-  self.imageView = [UIImageView new];
-  self.imageView.alpha = 0.7;
-  self.imageView.contentMode = UIViewContentModeScaleToFill;
-  self.imageView.image = [UIImage imageNamed:@"back"];
-  self.imageView.layer.masksToBounds = YES;
-  self.imageView.layer.cornerRadius = 4;
-  [self.contentView addSubview:self.imageView];
+- (instancetype)initWithFrame:(CGRect)frame {
+  if (self = [super initWithFrame:frame]) {
+    self.contentView.layer.cornerRadius = kDefaultCornerRadius;
+    self.contentView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.contentView.layer.borderWidth = kDefaultBorderWidth;
 
-  self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-  NSDictionary *views = NSDictionaryOfVariableBindings(_imageView);
-  [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_imageView]|" options:0 metrics:nil views:views]];
-  [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_imageView]|" options:0 metrics:nil views:views]];
+    _backImageView = [UIImageView new];
+    _backImageView.contentMode = UIViewContentModeScaleToFill;
+    _backImageView.image = [UIImage imageNamed:@"back"];
+    [self.contentView addSubview:_backImageView];
+
+    _backImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = NSDictionaryOfVariableBindings(_backImageView);
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_backImageView]|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backImageView]|" options:0 metrics:nil views:views]];
+  }
+  return self;
+}
+
+- (void)setFlippedUp:(BOOL)flippedUp {
+  _flippedUp = flippedUp;
+  self.backImageView.hidden = flippedUp;
 }
 
 @end

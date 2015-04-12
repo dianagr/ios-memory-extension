@@ -10,4 +10,6 @@
 
 @interface MMCollectionViewCell : UICollectionViewCell
 
+@property (assign, nonatomic, getter=isFlippedUp) BOOL flippedUp;
+
 @end

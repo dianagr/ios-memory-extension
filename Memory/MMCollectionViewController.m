@@ -27,4 +27,13 @@
   return cell;
 }
 
+#pragma mark UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+  MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+  [UIView transitionWithView:cell.contentView duration:0.2 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+    cell.flippedUp = !cell.isFlippedUp;
+  } completion:nil];
+}
+
 @end
