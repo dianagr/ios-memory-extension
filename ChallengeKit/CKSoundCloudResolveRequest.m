@@ -10,12 +10,8 @@
 
 @implementation CKSoundCloudResolveRequest
 
-/*! Creates an HTTP GET request for the /resolve path, then calls a handler upon completion.
- @param permalink The permalink to resolve, passed in as the 'url' parameter.
- @param completion Completion handler that's called after data has been fetched.
- */
-+ (instancetype)newRequestWithPermalink:(NSURL *)permalink completion:(CKSoundCloudRequestCompletion)completion {
-  return [self newRequestGETWithPath:@"resolve" params:@{@"url": permalink} completion:completion];
++ (instancetype)newRequestWithResolveURL:(NSURL *)resolveURL completion:(CKSoundCloudRequestCompletion)completion {
+  return [self newRequestGETWithPath:@"resolve" params:@{@"url": resolveURL} completion:completion];
 }
 
 @end

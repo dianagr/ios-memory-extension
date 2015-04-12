@@ -10,10 +10,14 @@
 
 @interface CKSoundCloud : NSObject
 
++ (NSString *)host;
+
 + (NSString *)clientId;
+
+#pragma mark API fields
 
 + (NSString *)clientIdKey;
 
-+ (NSString *)host;
++ (NSString *)userIdKey;
 
 @end

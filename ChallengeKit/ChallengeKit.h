@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char ChallengeKitVersionString[];
 #import <ChallengeKit/CKSoundCloud.h>
 #import <ChallengeKit/CKSoundCloudRequest.h>
 #import <ChallengeKit/CKSoundCloudResolveRequest.h>
+#import <ChallengeKit/CKSoundCloudUserRequest.h>

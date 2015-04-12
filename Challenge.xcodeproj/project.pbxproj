@@ -21,6 +21,8 @@
 		55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */; };
 		55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */; };
 		55D328451AD9B31900DC0311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
+		55D328481ADADF8900DC0311 /* CKSoundCloudUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55D328491ADADF8900DC0311 /* CKSoundCloudUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */; };
 		55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035871AD62F1000C0D4ED /* ChallengeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F0358E1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
 		55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */; };
@@ -130,6 +132,8 @@
 		55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewCell.m; sourceTree = "<group>"; };
 		55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionViewController.h; sourceTree = "<group>"; };
 		55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewController.m; sourceTree = "<group>"; };
+		55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSoundCloudUserRequest.h; sourceTree = "<group>"; };
+		55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSoundCloudUserRequest.m; sourceTree = "<group>"; };
 		55F035831AD62F1000C0D4ED /* ChallengeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChallengeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F035861AD62F1000C0D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F035871AD62F1000C0D4ED /* ChallengeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeKit.h; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */,
 				55F035AE1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h */,
 				55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */,
+				55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */,
+				55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */,
 				55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */,
 				55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */,
 				55F035851AD62F1000C0D4ED /* Supporting Files */,
@@ -341,6 +347,7 @@
 				55F035B51AD6393D00C0D4ED /* CKSoundCloudRequest.h in Headers */,
 				55F035BF1AD64FD100C0D4ED /* NSURL+CKUtils.h in Headers */,
 				55F035B01AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h in Headers */,
+				55D328481ADADF8900DC0311 /* CKSoundCloudUserRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +578,7 @@
 				55F035B61AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
 				55F035B11AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
 				55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
+				55D328491ADADF8900DC0311 /* CKSoundCloudUserRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

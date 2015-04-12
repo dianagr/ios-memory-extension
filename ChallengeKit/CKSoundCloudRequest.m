@@ -42,7 +42,7 @@
 #pragma mark Private
 
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {
-  NSMutableDictionary *params = [queryParams mutableCopy];
+  NSMutableDictionary *params = queryParams ? [queryParams mutableCopy] : [NSMutableDictionary new];
   if ([CKSoundCloud clientId]) {
     params[[CKSoundCloud clientIdKey]] = [CKSoundCloud clientId];
   }

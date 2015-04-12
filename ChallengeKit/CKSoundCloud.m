@@ -25,14 +25,18 @@
   return authCredentials;
 }
 
-#pragma mark API fields
-
 + (NSString *)clientId {
   return [self _apiAuthenticationCredentials][[self clientIdKey]];
 }
 
+#pragma mark API fields
+
 + (NSString *)clientIdKey {
   return @"client_id";
+}
+
++ (NSString *)userIdKey {
+  return @"user_id";
 }
 
 @end

@@ -48,12 +48,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-r8-H46">
+                                <rect key="frame" x="291" y="291" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="baseline" secondItem="S4b-7B-ObQ" secondAttribute="firstBaseline" id="3RB-og-ghH"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="leading" secondItem="S4b-7B-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="9QE-wH-qsY"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leading" id="E56-GW-kTq"/>
+                            <constraint firstAttribute="centerX" secondItem="7I3-r8-H46" secondAttribute="centerX" constant="-1" id="IXa-gc-Q0e"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" id="JJf-Dq-1Xr"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" constant="4" id="YQz-m8-PYc"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="baseline" secondItem="S4b-7B-ObQ" secondAttribute="baseline" id="drX-Mr-s6T"/>
@@ -61,10 +65,12 @@
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="trailing" secondItem="wbc-yd-nQP" secondAttribute="trailingMargin" id="ilH-2d-9m1"/>
                             <constraint firstAttribute="trailing" secondItem="Mem-kN-pK3" secondAttribute="trailing" id="iuY-db-Zac"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" id="t3d-8r-PeN"/>
+                            <constraint firstAttribute="centerY" secondItem="7I3-r8-H46" secondAttribute="centerY" constant="-1" id="uHS-hr-p7y"/>
                             <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="Mem-kN-pK3" secondAttribute="bottom" id="uaS-Uy-bnf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="7I3-r8-H46" id="qby-b5-lHg"/>
                         <outlet property="cancelButton" destination="S4b-7B-ObQ" id="fzI-aK-m01"/>
                         <outlet property="collectionView" destination="Mem-kN-pK3" id="aDz-3J-ahR"/>
                         <outlet property="titleLabel" destination="VsS-jD-ENu" id="fF7-6M-KAw"/>

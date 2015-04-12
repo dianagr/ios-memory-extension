@@ -14,12 +14,13 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <ChallengeKit/ChallengeKit.h>
 
-static const NSInteger kMMUIiewAnimationDuration = 0.2;
+static const CGFloat kMMUIiewAnimationDuration = 0.2;
 
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) MMCollectionViewController *collectionViewController;
 @end
 
@@ -37,24 +38,13 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
       }];
     } else if ([itemProvider hasItemConformingToTypeIdentifier:(__bridge NSString *)kUTTypeURL]) {
       [itemProvider loadItemForTypeIdentifier:(__bridge NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *item, NSError *error) {
-        CKSoundCloudResolveRequest *request = [CKSoundCloudResolveRequest newRequestWithPermalink:item completion:^(id response, NSError *requestError) {
-          NSLog(@"LOADED URL: %@", response);
-        }];
-        [request resume];
+        [self _resolvePermalink:item];
       }];
     }
   }
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
   [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
-  [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
-    self.view.transform = CGAffineTransformIdentity;
-  }];
 }
 
 - (MMCollectionViewController *)collectionViewController {
@@ -64,12 +54,27 @@ static const NSInteger kMMUIiewAnimationDuration = 0.2;
   return _collectionViewController;
 }
 
+#pragma mark Private
+
 - (IBAction)didTapCancel:(UIButton *)sender {
-  [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
-    self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
-  } completion:^(BOOL finished) {
-    [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
+  self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
+  [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
+}
+
+- (void)_resolvePermalink:(NSURL *)url {
+  CKSoundCloudRequest *request = [CKSoundCloudResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *requestError) {
+    [self _loadTracksForUserId:response[[CKSoundCloud userIdKey]]];
   }];
+  [request resume];
+}
+
+- (void)_loadTracksForUserId:(NSString *)userId {
+  CKSoundCloudRequest *request = [CKSoundCloudUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
+    [self.collectionViewController setTracks:response];
+    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    [self.activityIndicator stopAnimating];
+  }];
+  [request resume];
 }
 
 @end

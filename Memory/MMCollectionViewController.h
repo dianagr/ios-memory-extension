@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+extern NSString *const MMCollectionViewDidOpenPairNotification;
+extern NSString *const MMCollectionViewOpenedIndexesKey;
+
 @interface MMCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
+
+- (void)setTracks:(NSArray *)tracks;
 
 @end
