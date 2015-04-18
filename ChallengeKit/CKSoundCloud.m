@@ -39,4 +39,8 @@
   return @"user_id";
 }
 
++ (NSString *)artworkURLKey {
+  return @"artwork_url";
+}
+
 @end

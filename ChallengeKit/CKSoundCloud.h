@@ -20,4 +20,6 @@
 
 + (NSString *)userIdKey;
 
++ (NSString *)artworkURLKey;
+
 @end

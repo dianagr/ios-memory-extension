@@ -31,11 +31,9 @@ typedef void(^FlipAnimationBlock)();
   return _openedCardIndexPaths;
 }
 
-- (void)_flipBackCells:(UICollectionView *)collectionView delay:(NSTimeInterval)delay {
-  NSArray *openedIndexPaths = [self.openedCardIndexPaths copy];
-  [self.openedCardIndexPaths removeAllObjects];
+- (void)_flipBackCells:(UICollectionView *)collectionView openIndexPaths:(NSArray *)openIndexPaths delay:(NSTimeInterval)delay {
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    for (NSIndexPath *indexPath in openedIndexPaths) {
+    for (NSIndexPath *indexPath in openIndexPaths) {
       MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
       [self _flipCell:cell animationBlock:^{
         cell.flippedUp = NO;
@@ -52,7 +50,11 @@ typedef void(^FlipAnimationBlock)();
       [self.openedCardIndexPaths addObject:indexPath];
       
       if (self.openedCardIndexPaths.count == 2) {
-        [self _flipBackCells:collectionView delay:1];
+        NSArray *openedIndexPaths = [self.openedCardIndexPaths copy];
+        [self.openedCardIndexPaths removeAllObjects];
+        if (![self _openedCardsDidMatch:openedIndexPaths]) {
+          [self _flipBackCells:collectionView openIndexPaths:openedIndexPaths delay:1];
+        }
       }
     }];
   }
@@ -60,6 +62,14 @@ typedef void(^FlipAnimationBlock)();
 
 - (void)_flipCell:(UICollectionViewCell *)cell animationBlock:(FlipAnimationBlock)block {
   [UIView transitionWithView:cell.contentView duration:0.2 options:UIViewAnimationOptionTransitionFlipFromRight animations:block completion:nil];
+}
+
+- (BOOL)_openedCardsDidMatch:(NSArray *)indexPaths {
+  NSMutableSet *openedCards = [NSMutableSet new];
+  for (NSIndexPath *indexPath in indexPaths) {
+    [openedCards addObject:self.tracks[indexPath.item]];
+  }
+  return openedCards.count == 1;
 }
 
 #pragma mark UICollectionViewDataSource
@@ -74,6 +84,7 @@ typedef void(^FlipAnimationBlock)();
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class]) forIndexPath:indexPath];
+  [cell setTrack:self.tracks[indexPath.item]];
   return cell;
 }
 
