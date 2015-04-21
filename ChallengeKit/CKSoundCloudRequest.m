@@ -31,9 +31,7 @@
       }
     }
     if (completion) {
-      dispatch_async(dispatch_get_main_queue(), ^{
-        completion(jsonResponse, error);
-      });
+      completion(jsonResponse, error);
     }
   }];
   return request;

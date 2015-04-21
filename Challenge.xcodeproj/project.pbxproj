@@ -10,6 +10,7 @@
 		5510CFE81AE1CBA900A6EB9A /* MMGameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFE71AE1CBA900A6EB9A /* MMGameSet.m */; };
 		5510CFEB1AE1D10500A6EB9A /* CKImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */; };
 		5510CFEC1AE1D10500A6EB9A /* CKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */; };
+		5510CFF61AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -116,6 +117,7 @@
 		5510CFE71AE1CBA900A6EB9A /* MMGameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGameSet.m; sourceTree = "<group>"; };
 		5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKImageLoader.h; sourceTree = "<group>"; };
 		5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKImageLoader.m; sourceTree = "<group>"; };
+		5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLCKUtilsTest.m; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */,
 				55F035941AD62F1000C0D4ED /* Supporting Files */,
+				5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */,
 			);
 			path = ChallengeKitTests;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				55F035B21AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
 				55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */,
 				55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
+				5510CFF61AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m in Sources */,
 				55F035C11AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */,
 				55F035B71AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
 			);

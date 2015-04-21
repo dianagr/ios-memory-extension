@@ -71,9 +71,11 @@ static const CGFloat kMMUIiewAnimationDuration = 0.2;
 
 - (void)_loadTracksForUserId:(NSString *)userId {
   CKSoundCloudRequest *request = [CKSoundCloudUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
-    [self.collectionViewController setTracks:[MMGameSet gameSetFromItems:response]];
-    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-    [self.activityIndicator stopAnimating];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.collectionViewController setTracks:[MMGameSet gameSetFromItems:response]];
+      [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+      [self.activityIndicator stopAnimating];
+    });
   }];
   [request resume];
 }
