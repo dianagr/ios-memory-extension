@@ -10,12 +10,10 @@
 
 #import "MMCollectionViewCell.h"
 #import "MMCollectionViewController.h"
-#import "MMGameSet.h"
+#import "NSArray+MMGameSet.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <ChallengeKit/ChallengeKit.h>
-
-static const CGFloat kMMUIiewAnimationDuration = 0.2;
 
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -72,7 +70,7 @@ static const CGFloat kMMUIiewAnimationDuration = 0.2;
 - (void)_loadTracksForUserId:(NSString *)userId {
   CKSoundCloudRequest *request = [CKSoundCloudUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self.collectionViewController setTracks:[MMGameSet gameSetFromItems:response]];
+      [self.collectionViewController setTracks:[NSArray shuffledFromArray:[response arrayByAddingObjectsFromArray:response] maxCount:4]];
       [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
       [self.activityIndicator stopAnimating];
     });

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5510CFE81AE1CBA900A6EB9A /* MMGameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFE71AE1CBA900A6EB9A /* MMGameSet.m */; };
 		5510CFEB1AE1D10500A6EB9A /* CKImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */; };
 		5510CFEC1AE1D10500A6EB9A /* CKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */; };
 		5510CFF61AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */; };
+		5510CFFB1AE7192B00A6EB9A /* NSArray+MMGameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -113,11 +113,11 @@
 
 /* Begin PBXFileReference section */
 		55054F091AD61C9500E30BB1 /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = api_key.plist; path = ../Challenge/api_key.plist; sourceTree = "<group>"; };
-		5510CFE61AE1CBA900A6EB9A /* MMGameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGameSet.h; sourceTree = "<group>"; };
-		5510CFE71AE1CBA900A6EB9A /* MMGameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGameSet.m; sourceTree = "<group>"; };
 		5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKImageLoader.h; sourceTree = "<group>"; };
 		5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKImageLoader.m; sourceTree = "<group>"; };
 		5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLCKUtilsTest.m; sourceTree = "<group>"; };
+		5510CFF91AE7192B00A6EB9A /* NSArray+MMGameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MMGameSet.h"; sourceTree = "<group>"; };
+		5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MMGameSet.m"; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -276,8 +276,8 @@
 				55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */,
 				55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */,
 				55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */,
-				5510CFE61AE1CBA900A6EB9A /* MMGameSet.h */,
-				5510CFE71AE1CBA900A6EB9A /* MMGameSet.m */,
+				5510CFF91AE7192B00A6EB9A /* NSArray+MMGameSet.h */,
+				5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
 				55F0357D1AD62EB100C0D4ED /* Frameworks */,
 				558BFCF81AD1B52B0066E039 /* Supporting Files */,
@@ -581,7 +581,7 @@
 			files = (
 				55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */,
 				55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */,
-				5510CFE81AE1CBA900A6EB9A /* MMGameSet.m in Sources */,
+				5510CFFB1AE7192B00A6EB9A /* NSArray+MMGameSet.m in Sources */,
 				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
