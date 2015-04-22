@@ -2,8 +2,8 @@
 //  MMCollectionViewController.m
 //  Challenge
 //
-//  Created by Diana Gren on 4/11/15.
-//  Copyright (c) 2015 Diana Gren. All rights reserved.
+//  Created by D Gren on 4/11/15.
+//  Copyright (c) 2015 D Gren. All rights reserved.
 //
 
 #import "MMCollectionViewController.h"
@@ -45,6 +45,23 @@ typedef void(^FlipAnimationCompletionBlock)(BOOL finished);
   return [flippedTracks copy];
 }
 
+- (void)_resetCellsForIndexPaths:(NSArray *)indexPaths collectionView:(UICollectionView *)collectionView delay:(NSTimeInterval)delay {
+  BOOL allOpenedItemsEqual = [NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:indexPaths] equalBlock:^BOOL(NSDictionary *track1, NSDictionary *track2) {
+    return [track1[[CKSoundCloud artworkURLKey]] isEqual:track2[[CKSoundCloud artworkURLKey]]];
+  }];
+  
+  if (!allOpenedItemsEqual) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      for (NSIndexPath *indexPath in indexPaths) {
+        MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        [UIView transitionWithView:cell.contentView duration:kMMUIiewAnimationDuration options:0 animations:^{
+          cell.flippedUp = NO;
+        } completion:nil];
+      }
+    });
+  }
+}
+
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -63,28 +80,11 @@ typedef void(^FlipAnimationCompletionBlock)(BOOL finished);
 
 #pragma mark UICollectionViewDelegate
 
-- (void)_resetCellsForIndexPaths:(NSArray *)indexPaths collectionView:(UICollectionView *)collectionView {
-  BOOL allOpenedItemsEqual = [NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:indexPaths] equalBlock:^BOOL(NSDictionary *track1, NSDictionary *track2) {
-    return [track1[[CKSoundCloud artworkURLKey]] isEqual:track2[[CKSoundCloud artworkURLKey]]];
-  }];
-
-  if (!allOpenedItemsEqual) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      for (NSIndexPath *indexPath in indexPaths) {
-        MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-        [UIView transitionWithView:cell.contentView duration:kMMUIiewAnimationDuration options:0 animations:^{
-          cell.flippedUp = NO;
-        } completion:nil];
-      }
-    });
-  }
-}
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
   if (self.flippedIndexPaths.count >= 2) {
     NSArray *indexPaths = [self.flippedIndexPaths copy];
     [self.flippedIndexPaths removeAllObjects];
-    [self _resetCellsForIndexPaths:indexPaths collectionView:collectionView];
+    [self _resetCellsForIndexPaths:indexPaths collectionView:collectionView delay:1];
   }
 
   MMCollectionViewCell *cell = (MMCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];

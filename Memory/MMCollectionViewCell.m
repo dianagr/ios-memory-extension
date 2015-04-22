@@ -2,8 +2,8 @@
 //  MMCollectionViewCell.m
 //  Challenge
 //
-//  Created by Diana Gren on 4/11/15.
-//  Copyright (c) 2015 Diana Gren. All rights reserved.
+//  Created by D Gren on 4/11/15.
+//  Copyright (c) 2015 D Gren. All rights reserved.
 //
 
 #import "MMCollectionViewCell.h"
@@ -17,6 +17,7 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 @interface MMCollectionViewCell () <CKImageLoaderDelegate>
 @property (strong, nonatomic) UIImageView *backImageView;
 @property (strong, nonatomic) UIImageView *frontImageView;
+@property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) CKImageLoader *imageLoader;
 @end
 
@@ -39,13 +40,21 @@ static const CGFloat kDefaultBorderWidth = 0.5;
     _frontImageView.hidden = YES;
     [self.contentView addSubview:_frontImageView];
 
+    _titleLabel = [UILabel new];
+    _titleLabel.hidden = YES;
+    _titleLabel.numberOfLines = 2;
+    [_titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self.contentView addSubview:_titleLabel];
+
+    NSDictionary *views = NSDictionaryOfVariableBindings(_backImageView, _frontImageView, _titleLabel);
     _backImageView.translatesAutoresizingMaskIntoConstraints = NO;
     _frontImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSDictionary *views = NSDictionaryOfVariableBindings(_backImageView, _frontImageView);
+    _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_backImageView]|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backImageView]|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_frontImageView]|" options:0 metrics:nil views:views]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_frontImageView]|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_frontImageView][_titleLabel]|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_titleLabel]|" options:0 metrics:nil views:views]];
   }
   return self;
 }

@@ -2,8 +2,8 @@
 //  CKSoundCloud.m
 //  Challenge
 //
-//  Created by Diana Gren on 4/8/15.
-//  Copyright (c) 2015 Diana Gren. All rights reserved.
+//  Created by D Gren on 4/8/15.
+//  Copyright (c) 2015 D Gren. All rights reserved.
 //
 
 #import "CKSoundCloud.h"
