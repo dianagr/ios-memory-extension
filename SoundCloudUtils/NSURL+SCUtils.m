@@ -1,14 +1,14 @@
 //
-//  NSURL+CKUtils.m
+//  NSURL+SCUtils.m
 //  Challenge
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
-#import "NSURL+CKUtils.h"
+#import "NSURL+SCUtils.h"
 
-@implementation NSURL (CKUtils)
+@implementation NSURL (SCUtils)
 
 + (instancetype)URLWithHost:(NSString *)host path:(NSString *)path queryParams:(NSDictionary *)params {
   NSString *urlString = host;

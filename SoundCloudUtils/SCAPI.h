@@ -1,14 +1,14 @@
 //
-//  CKSoundCloud.h
+//  SCAPI.h
 //  Challenge
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface CKSoundCloud : NSObject
+@interface SCAPI : NSObject
 
 + (NSString *)host;
 

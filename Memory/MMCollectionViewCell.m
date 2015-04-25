@@ -8,17 +8,16 @@
 
 #import "MMCollectionViewCell.h"
 
-#import "CKImageLoader.h"
-#import <ChallengeKit/ChallengeKit.h>
+#import <SoundCloudUtils/SoundCloudUtils.h>
 
 static const CGFloat kDefaultCornerRadius = 4;
 static const CGFloat kDefaultBorderWidth = 0.5;
 
-@interface MMCollectionViewCell () <CKImageLoaderDelegate>
+@interface MMCollectionViewCell () <SCImageLoaderDelegate>
 @property (strong, nonatomic) UIImageView *backImageView;
 @property (strong, nonatomic) UIImageView *frontImageView;
 @property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) CKImageLoader *imageLoader;
+@property (strong, nonatomic) SCImageLoader *imageLoader;
 @end
 
 @implementation MMCollectionViewCell
@@ -73,19 +72,19 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 
 - (void)setTrack:(NSDictionary *)track {
   self.imageLoader.delegate = self;
-  [self.imageLoader loadImageWithURL:[NSURL URLWithString:track[[CKSoundCloud artworkURLKey]]]];
+  [self.imageLoader loadImageWithURL:[NSURL URLWithString:track[[SCAPI artworkURLKey]]]];
 }
 
-- (CKImageLoader *)imageLoader {
+- (SCImageLoader *)imageLoader {
   if (!_imageLoader) {
-    _imageLoader = [[CKImageLoader alloc] init];
+    _imageLoader = [[SCImageLoader alloc] init];
   }
   return _imageLoader;
 }
 
 #pragma mark CKImageLoaderDelegate
 
-- (void)imageLoader:(CKImageLoader *)imageLoader didLoadImage:(UIImage *)image {
+- (void)imageLoader:(SCImageLoader *)imageLoader didLoadImage:(UIImage *)image {
   self.frontImageView.image = image;
 }
 

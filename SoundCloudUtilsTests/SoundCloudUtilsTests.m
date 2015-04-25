@@ -1,19 +1,19 @@
 //
-//  ChallengeKitTests.m
-//  ChallengeKitTests
+//  SoundCloudUtilsTests.m
+//  SoundCloudUtilsTests
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface ChallengeKitTests : XCTestCase
+@interface SoundCloudUtilsTests : XCTestCase
 
 @end
 
-@implementation ChallengeKitTests
+@implementation SoundCloudUtilsTests
 
 - (void)setUp {
     [super setUp];

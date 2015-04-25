@@ -1,25 +1,25 @@
 //
-//  CKSoundCloudRequest.m
+//  SCRequest.m
 //  Challenge
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
-#import "CKSoundCloudRequest.h"
+#import "SCRequest.h"
 
-#import "CKSoundCloud.h"
-#import "NSURL+CKUtils.h"
+#import "NSURL+SCUtils.h"
+#import "SCAPI.h"
 
-@interface CKSoundCloudRequest ()
+@interface SCRequest ()
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @end
 
-@implementation CKSoundCloudRequest
+@implementation SCRequest
 
-+ (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(CKSoundCloudRequestCompletion)completion {
-  NSURL *url = [NSURL URLWithHost:[CKSoundCloud host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
-  CKSoundCloudRequest *request = [CKSoundCloudRequest new];
++ (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(SCRequestCompletion)completion {
+  NSURL *url = [NSURL URLWithHost:[SCAPI host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
+  SCRequest *request = [SCRequest new];
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     NSJSONSerialization *jsonResponse = nil;
     if (error) {
@@ -41,8 +41,8 @@
 
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {
   NSMutableDictionary *params = queryParams ? [queryParams mutableCopy] : [NSMutableDictionary new];
-  if ([CKSoundCloud clientId]) {
-    params[[CKSoundCloud clientIdKey]] = [CKSoundCloud clientId];
+  if ([SCAPI clientId]) {
+    params[[SCAPI clientIdKey]] = [SCAPI clientId];
   }
   return params;
 }

@@ -1,16 +1,16 @@
 //
-//  CKSoundCloudRequest.h
+//  SCRequest.h
 //  Challenge
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-typedef void(^CKSoundCloudRequestCompletion)(id response, NSError *error);
+typedef void(^SCRequestCompletion)(id response, NSError *error);
 
-@interface CKSoundCloudRequest : NSObject
+@interface SCRequest : NSObject
 
 @property (readonly, strong, nonatomic) NSURLSessionDataTask *task;
 
@@ -19,7 +19,7 @@ typedef void(^CKSoundCloudRequestCompletion)(id response, NSError *error);
  @param params The query parameters to use in the GET request.
  @param completion Completion handler that's called after data has been fetched.
  */
-+ (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(CKSoundCloudRequestCompletion)completion;
++ (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(SCRequestCompletion)completion;
 
 //! Resumes the request, if it is suspended.
 - (void)resume;

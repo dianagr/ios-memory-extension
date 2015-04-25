@@ -13,7 +13,7 @@
 #import "NSArray+MMGameSet.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <ChallengeKit/ChallengeKit.h>
+#import <SoundCloudUtils/SoundCloudUtils.h>
 
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -61,14 +61,14 @@
 }
 
 - (void)_resolvePermalink:(NSURL *)url {
-  CKSoundCloudRequest *request = [CKSoundCloudResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *requestError) {
-    [self _loadTracksForUserId:response[[CKSoundCloud userIdKey]]];
+  SCResolveRequest *request = [SCResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *requestError) {
+    [self _loadTracksForUserId:response[[SCAPI userIdKey]]];
   }];
   [request resume];
 }
 
 - (void)_loadTracksForUserId:(NSString *)userId {
-  CKSoundCloudRequest *request = [CKSoundCloudUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
+  SCUserRequest *request = [SCUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
       [self.collectionViewController setTracks:[NSArray shuffledFromArray:[response arrayByAddingObjectsFromArray:response] maxCount:4]];
       [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];

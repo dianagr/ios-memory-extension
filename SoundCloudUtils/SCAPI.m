@@ -1,14 +1,14 @@
 //
-//  CKSoundCloud.m
+//  SCAPI.m
 //  Challenge
 //
-//  Created by D Gren on 4/8/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
-#import "CKSoundCloud.h"
+#import "SCAPI.h"
 
-@implementation CKSoundCloud
+@implementation SCAPI
 
 + (NSString *)host {
   return @"https://api.soundcloud.com";

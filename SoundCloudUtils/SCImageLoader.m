@@ -1,18 +1,18 @@
 //
-//  CKSoundCloudImageLoader.m
+//  SCImageLoader.m
 //  Challenge
 //
-//  Created by D Gren on 4/17/15.
-//  Copyright (c) 2015 D Gren. All rights reserved.
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
 //
 
-#import "CKImageLoader.h"
+#import "SCImageLoader.h"
 
-@interface CKImageLoader ()
+@interface SCImageLoader ()
 @property (strong, nonatomic) NSURLSessionDataTask *task;
 @end
 
-@implementation CKImageLoader
+@implementation SCImageLoader
 
 + (NSCache *)sharedCache {
   static NSCache *imageCache = nil;
@@ -52,7 +52,7 @@
       NSLog(@"Image loading error: %@", error.localizedDescription);
       return;
     }
-
+    
     [[[self class] sharedCache] setObject:data forKey:url];
     dispatch_async(dispatch_get_main_queue(), ^{
       UIImage *image = [UIImage imageWithData:data];
@@ -65,7 +65,7 @@
 }
 
 - (void)_didLoadImage:(UIImage *)image {
-  id<CKImageLoaderDelegate> delegate = self.delegate;
+  id<SCImageLoaderDelegate> delegate = self.delegate;
   [delegate imageLoader:self didLoadImage:image];
 }
 

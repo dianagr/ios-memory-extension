@@ -7,10 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5510CFEB1AE1D10500A6EB9A /* CKImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */; };
-		5510CFEC1AE1D10500A6EB9A /* CKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */; };
-		5510CFF61AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */; };
 		5510CFFB1AE7192B00A6EB9A /* NSArray+MMGameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */; };
+		5555E2791AEBF73F003CF3BB /* SoundCloudUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2881AEBF73F003CF3BB /* SoundCloudUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */; };
+		5555E28B1AEBF73F003CF3BB /* SoundCloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; };
+		5555E28C1AEBF73F003CF3BB /* SoundCloudUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5555E2951AEBF77C003CF3BB /* SCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2931AEBF77B003CF3BB /* SCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2961AEBF77C003CF3BB /* SCAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2941AEBF77C003CF3BB /* SCAPI.m */; };
+		5555E2991AEBF79D003CF3BB /* SCRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2971AEBF79D003CF3BB /* SCRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E29A1AEBF79D003CF3BB /* SCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2981AEBF79D003CF3BB /* SCRequest.m */; };
+		5555E29B1AEBF79D003CF3BB /* SCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2981AEBF79D003CF3BB /* SCRequest.m */; };
+		5555E29D1AEBF84E003CF3BB /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5555E29C1AEBF84E003CF3BB /* api_key.plist */; };
+		5555E29E1AEBF84E003CF3BB /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5555E29C1AEBF84E003CF3BB /* api_key.plist */; };
+		5555E2A61AEBF980003CF3BB /* NSURL+SCUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2A71AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */; };
+		5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */; };
+		5555E2AB1AEBF9C2003CF3BB /* SCResolveRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2AC1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */; };
+		5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */; };
+		5555E2B01AEBF9F6003CF3BB /* SCUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2AE1AEBF9F6003CF3BB /* SCUserRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2B11AEBF9F6003CF3BB /* SCUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2AF1AEBF9F6003CF3BB /* SCUserRequest.m */; };
+		5555E2B21AEBF9F6003CF3BB /* SCUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2AF1AEBF9F6003CF3BB /* SCUserRequest.m */; };
+		5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */; };
+		5555E2B81AEBFE6D003CF3BB /* SoundCloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; };
+		5555E2B91AEBFEA3003CF3BB /* SoundCloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; };
+		5555E2BC1AEC00F4003CF3BB /* SCImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E2BD1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
+		5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -25,30 +48,30 @@
 		55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */; };
 		55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */; };
 		55D328451AD9B31900DC0311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
-		55D328481ADADF8900DC0311 /* CKSoundCloudUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55D328491ADADF8900DC0311 /* CKSoundCloudUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */; };
-		55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035871AD62F1000C0D4ED /* ChallengeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F0358E1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
-		55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */; };
-		55F0359A1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
-		55F0359B1AD62F1000C0D4ED /* ChallengeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		55F035A31AD62F1D00C0D4ED /* ChallengeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */; };
-		55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
-		55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */; };
-		55F035AD1AD636B600C0D4ED /* api_key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55054F091AD61C9500E30BB1 /* api_key.plist */; };
-		55F035B01AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035AE1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F035B11AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */; };
-		55F035B21AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */; };
-		55F035B51AD6393D00C0D4ED /* CKSoundCloudRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035B31AD6393D00C0D4ED /* CKSoundCloudRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F035B61AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */; };
-		55F035B71AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */; };
-		55F035BF1AD64FD100C0D4ED /* NSURL+CKUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */; };
-		55F035C01AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */; };
-		55F035C11AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5555E2801AEBF73F003CF3BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5555E2731AEBF73F003CF3BB;
+			remoteInfo = SoundCloudUtils;
+		};
+		5555E2821AEBF73F003CF3BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 558BFCC81AD1B4FC0066E039;
+			remoteInfo = Challenge;
+		};
+		5555E2891AEBF73F003CF3BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5555E2731AEBF73F003CF3BB;
+			remoteInfo = SoundCloudUtils;
+		};
 		558BFCE31AD1B4FD0066E039 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
@@ -62,27 +85,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 558BFCF51AD1B52B0066E039;
 			remoteInfo = Memory;
-		};
-		55F0358F1AD62F1000C0D4ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55F035821AD62F1000C0D4ED;
-			remoteInfo = ChallengeKit;
-		};
-		55F035911AD62F1000C0D4ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 558BFCC81AD1B4FC0066E039;
-			remoteInfo = Challenge;
-		};
-		55F035981AD62F1000C0D4ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 558BFCC11AD1B4FC0066E039 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55F035821AD62F1000C0D4ED;
-			remoteInfo = ChallengeKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -104,7 +106,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				55F0359B1AD62F1000C0D4ED /* ChallengeKit.framework in Embed Frameworks */,
+				5555E28C1AEBF73F003CF3BB /* SoundCloudUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,12 +114,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		55054F091AD61C9500E30BB1 /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = api_key.plist; path = ../Challenge/api_key.plist; sourceTree = "<group>"; };
-		5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CKImageLoader.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CKImageLoader.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSURLCKUtilsTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5510CFF91AE7192B00A6EB9A /* NSArray+MMGameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSArray+MMGameSet.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSArray+MMGameSet.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5555E2771AEBF73F003CF3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundCloudUtils.h; sourceTree = "<group>"; };
+		5555E27E1AEBF73F003CF3BB /* SoundCloudUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5555E2861AEBF73F003CF3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudUtilsTests.m; sourceTree = "<group>"; };
+		5555E2931AEBF77B003CF3BB /* SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAPI.h; sourceTree = "<group>"; };
+		5555E2941AEBF77C003CF3BB /* SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAPI.m; sourceTree = "<group>"; };
+		5555E2971AEBF79D003CF3BB /* SCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRequest.h; sourceTree = "<group>"; };
+		5555E2981AEBF79D003CF3BB /* SCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRequest.m; sourceTree = "<group>"; };
+		5555E29C1AEBF84E003CF3BB /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_key.plist; sourceTree = "<group>"; };
+		5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SCUtils.h"; sourceTree = "<group>"; };
+		5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SCUtils.m"; sourceTree = "<group>"; };
+		5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCResolveRequest.h; sourceTree = "<group>"; };
+		5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCResolveRequest.m; sourceTree = "<group>"; };
+		5555E2AE1AEBF9F6003CF3BB /* SCUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCUserRequest.h; sourceTree = "<group>"; };
+		5555E2AF1AEBF9F6003CF3BB /* SCUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUserRequest.m; sourceTree = "<group>"; };
+		5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTest.m; sourceTree = "<group>"; };
+		5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageLoader.h; sourceTree = "<group>"; };
+		5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageLoader.m; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -141,30 +159,29 @@
 		55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewCell.m; sourceTree = "<group>"; };
 		55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMCollectionViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMCollectionViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CKSoundCloudUserRequest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CKSoundCloudUserRequest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55F035831AD62F1000C0D4ED /* ChallengeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChallengeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55F035861AD62F1000C0D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55F035871AD62F1000C0D4ED /* ChallengeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChallengeKit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55F0358D1AD62F1000C0D4ED /* ChallengeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		55F035951AD62F1000C0D4ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ChallengeKitTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CKSoundCloud.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CKSoundCloud.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55F035AE1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CKSoundCloudResolveRequest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CKSoundCloudResolveRequest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55F035B31AD6393D00C0D4ED /* CKSoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CKSoundCloudRequest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CKSoundCloudRequest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSURL+CKUtils.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSURL+CKUtils.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5555E2701AEBF73F003CF3BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5555E27B1AEBF73F003CF3BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5555E2B81AEBFE6D003CF3BB /* SoundCloudUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		558BFCC61AD1B4FC0066E039 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F0359A1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */,
+				5555E28B1AEBF73F003CF3BB /* SoundCloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,37 +196,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F035A31AD62F1D00C0D4ED /* ChallengeKit.framework in Frameworks */,
+				5555E2B91AEBFEA3003CF3BB /* SoundCloudUtils.framework in Frameworks */,
 				558BFD071AD1C0EE0066E039 /* MobileCoreServices.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55F0357F1AD62F1000C0D4ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55F0358A1AD62F1000C0D4ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55F0358E1AD62F1000C0D4ED /* ChallengeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5555E2751AEBF73F003CF3BB /* SoundCloudUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */,
+				5555E2761AEBF73F003CF3BB /* Supporting Files */,
+				5555E2931AEBF77B003CF3BB /* SCAPI.h */,
+				5555E2941AEBF77C003CF3BB /* SCAPI.m */,
+				5555E2971AEBF79D003CF3BB /* SCRequest.h */,
+				5555E2981AEBF79D003CF3BB /* SCRequest.m */,
+				5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */,
+				5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */,
+				5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */,
+				5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */,
+				5555E2AE1AEBF9F6003CF3BB /* SCUserRequest.h */,
+				5555E2AF1AEBF9F6003CF3BB /* SCUserRequest.m */,
+				5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */,
+				5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */,
+			);
+			path = SoundCloudUtils;
+			sourceTree = "<group>";
+		};
+		5555E2761AEBF73F003CF3BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5555E29C1AEBF84E003CF3BB /* api_key.plist */,
+				5555E2771AEBF73F003CF3BB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5555E2841AEBF73F003CF3BB /* SoundCloudUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */,
+				5555E2851AEBF73F003CF3BB /* Supporting Files */,
+				5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */,
+			);
+			path = SoundCloudUtilsTests;
+			sourceTree = "<group>";
+		};
+		5555E2851AEBF73F003CF3BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5555E2861AEBF73F003CF3BB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		558BFCC01AD1B4FC0066E039 = {
 			isa = PBXGroup;
 			children = (
 				558BFCCB1AD1B4FC0066E039 /* Challenge */,
 				558BFCE51AD1B4FD0066E039 /* ChallengeTests */,
 				558BFCF71AD1B52B0066E039 /* Memory */,
-				55F035841AD62F1000C0D4ED /* ChallengeKit */,
-				55F035931AD62F1000C0D4ED /* ChallengeKitTests */,
+				5555E2751AEBF73F003CF3BB /* SoundCloudUtils */,
+				5555E2841AEBF73F003CF3BB /* SoundCloudUtilsTests */,
 				558BFCCA1AD1B4FC0066E039 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -220,8 +270,8 @@
 				558BFCC91AD1B4FC0066E039 /* Challenge.app */,
 				558BFCE21AD1B4FD0066E039 /* ChallengeTests.xctest */,
 				558BFCF61AD1B52B0066E039 /* Memory.appex */,
-				55F035831AD62F1000C0D4ED /* ChallengeKit.framework */,
-				55F0358D1AD62F1000C0D4ED /* ChallengeKitTests.xctest */,
+				5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */,
+				5555E27E1AEBF73F003CF3BB /* SoundCloudUtilsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,74 +351,63 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		55F035841AD62F1000C0D4ED /* ChallengeKit */ = {
-			isa = PBXGroup;
-			children = (
-				55F035871AD62F1000C0D4ED /* ChallengeKit.h */,
-				55F035A41AD62F5800C0D4ED /* CKSoundCloud.h */,
-				55F035A51AD62F5800C0D4ED /* CKSoundCloud.m */,
-				55F035B31AD6393D00C0D4ED /* CKSoundCloudRequest.h */,
-				55F035B41AD6393D00C0D4ED /* CKSoundCloudRequest.m */,
-				55F035AE1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h */,
-				55F035AF1AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m */,
-				55D328461ADADF8900DC0311 /* CKSoundCloudUserRequest.h */,
-				55D328471ADADF8900DC0311 /* CKSoundCloudUserRequest.m */,
-				5510CFE91AE1D10500A6EB9A /* CKImageLoader.h */,
-				5510CFEA1AE1D10500A6EB9A /* CKImageLoader.m */,
-				55F035BD1AD64FD100C0D4ED /* NSURL+CKUtils.h */,
-				55F035BE1AD64FD100C0D4ED /* NSURL+CKUtils.m */,
-				55F035851AD62F1000C0D4ED /* Supporting Files */,
-			);
-			path = ChallengeKit;
-			sourceTree = "<group>";
-		};
-		55F035851AD62F1000C0D4ED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				55054F091AD61C9500E30BB1 /* api_key.plist */,
-				55F035861AD62F1000C0D4ED /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		55F035931AD62F1000C0D4ED /* ChallengeKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				55F035961AD62F1000C0D4ED /* ChallengeKitTests.m */,
-				55F035941AD62F1000C0D4ED /* Supporting Files */,
-				5510CFF51AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m */,
-			);
-			path = ChallengeKitTests;
-			sourceTree = "<group>";
-		};
-		55F035941AD62F1000C0D4ED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				55F035951AD62F1000C0D4ED /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		55F035801AD62F1000C0D4ED /* Headers */ = {
+		5555E2711AEBF73F003CF3BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F035A61AD62F5800C0D4ED /* CKSoundCloud.h in Headers */,
-				55F035881AD62F1000C0D4ED /* ChallengeKit.h in Headers */,
-				55F035B51AD6393D00C0D4ED /* CKSoundCloudRequest.h in Headers */,
-				55F035BF1AD64FD100C0D4ED /* NSURL+CKUtils.h in Headers */,
-				5510CFEB1AE1D10500A6EB9A /* CKImageLoader.h in Headers */,
-				55F035B01AD6392C00C0D4ED /* CKSoundCloudResolveRequest.h in Headers */,
-				55D328481ADADF8900DC0311 /* CKSoundCloudUserRequest.h in Headers */,
+				5555E2A61AEBF980003CF3BB /* NSURL+SCUtils.h in Headers */,
+				5555E2791AEBF73F003CF3BB /* SoundCloudUtils.h in Headers */,
+				5555E2951AEBF77C003CF3BB /* SCAPI.h in Headers */,
+				5555E2B01AEBF9F6003CF3BB /* SCUserRequest.h in Headers */,
+				5555E2BC1AEC00F4003CF3BB /* SCImageLoader.h in Headers */,
+				5555E2991AEBF79D003CF3BB /* SCRequest.h in Headers */,
+				5555E2AB1AEBF9C2003CF3BB /* SCResolveRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5555E2731AEBF73F003CF3BB /* SoundCloudUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5555E2911AEBF73F003CF3BB /* Build configuration list for PBXNativeTarget "SoundCloudUtils" */;
+			buildPhases = (
+				5555E26F1AEBF73F003CF3BB /* Sources */,
+				5555E2701AEBF73F003CF3BB /* Frameworks */,
+				5555E2711AEBF73F003CF3BB /* Headers */,
+				5555E2721AEBF73F003CF3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundCloudUtils;
+			productName = SoundCloudUtils;
+			productReference = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5555E27D1AEBF73F003CF3BB /* SoundCloudUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5555E2921AEBF73F003CF3BB /* Build configuration list for PBXNativeTarget "SoundCloudUtilsTests" */;
+			buildPhases = (
+				5555E27A1AEBF73F003CF3BB /* Sources */,
+				5555E27B1AEBF73F003CF3BB /* Frameworks */,
+				5555E27C1AEBF73F003CF3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5555E2811AEBF73F003CF3BB /* PBXTargetDependency */,
+				5555E2831AEBF73F003CF3BB /* PBXTargetDependency */,
+			);
+			name = SoundCloudUtilsTests;
+			productName = SoundCloudUtilsTests;
+			productReference = 5555E27E1AEBF73F003CF3BB /* SoundCloudUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		558BFCC81AD1B4FC0066E039 /* Challenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 558BFCEC1AD1B4FD0066E039 /* Build configuration list for PBXNativeTarget "Challenge" */;
@@ -383,7 +422,7 @@
 			);
 			dependencies = (
 				558BFD001AD1B52B0066E039 /* PBXTargetDependency */,
-				55F035991AD62F1000C0D4ED /* PBXTargetDependency */,
+				5555E28A1AEBF73F003CF3BB /* PBXTargetDependency */,
 			);
 			name = Challenge;
 			productName = Challenge;
@@ -425,43 +464,6 @@
 			productReference = 558BFCF61AD1B52B0066E039 /* Memory.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		55F035821AD62F1000C0D4ED /* ChallengeKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55F0359C1AD62F1000C0D4ED /* Build configuration list for PBXNativeTarget "ChallengeKit" */;
-			buildPhases = (
-				55F0357E1AD62F1000C0D4ED /* Sources */,
-				55F0357F1AD62F1000C0D4ED /* Frameworks */,
-				55F035801AD62F1000C0D4ED /* Headers */,
-				55F035811AD62F1000C0D4ED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ChallengeKit;
-			productName = ChallengeKit;
-			productReference = 55F035831AD62F1000C0D4ED /* ChallengeKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		55F0358C1AD62F1000C0D4ED /* ChallengeKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55F035A01AD62F1000C0D4ED /* Build configuration list for PBXNativeTarget "ChallengeKitTests" */;
-			buildPhases = (
-				55F035891AD62F1000C0D4ED /* Sources */,
-				55F0358A1AD62F1000C0D4ED /* Frameworks */,
-				55F0358B1AD62F1000C0D4ED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				55F035901AD62F1000C0D4ED /* PBXTargetDependency */,
-				55F035921AD62F1000C0D4ED /* PBXTargetDependency */,
-			);
-			name = ChallengeKitTests;
-			productName = ChallengeKitTests;
-			productReference = 55F0358D1AD62F1000C0D4ED /* ChallengeKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -471,6 +473,13 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Diana Gren";
 				TargetAttributes = {
+					5555E2731AEBF73F003CF3BB = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					5555E27D1AEBF73F003CF3BB = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 558BFCC81AD1B4FC0066E039;
+					};
 					558BFCC81AD1B4FC0066E039 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -480,13 +489,6 @@
 					};
 					558BFCF51AD1B52B0066E039 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					55F035821AD62F1000C0D4ED = {
-						CreatedOnToolsVersion = 6.2;
-					};
-					55F0358C1AD62F1000C0D4ED = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 558BFCC81AD1B4FC0066E039;
 					};
 				};
 			};
@@ -506,13 +508,29 @@
 				558BFCC81AD1B4FC0066E039 /* Challenge */,
 				558BFCE11AD1B4FD0066E039 /* ChallengeTests */,
 				558BFCF51AD1B52B0066E039 /* Memory */,
-				55F035821AD62F1000C0D4ED /* ChallengeKit */,
-				55F0358C1AD62F1000C0D4ED /* ChallengeKitTests */,
+				5555E2731AEBF73F003CF3BB /* SoundCloudUtils */,
+				5555E27D1AEBF73F003CF3BB /* SoundCloudUtilsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5555E2721AEBF73F003CF3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5555E29D1AEBF84E003CF3BB /* api_key.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5555E27C1AEBF73F003CF3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5555E29E1AEBF84E003CF3BB /* api_key.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		558BFCC71AD1B4FC0066E039 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,24 +557,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55F035811AD62F1000C0D4ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55F035AD1AD636B600C0D4ED /* api_key.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55F0358B1AD62F1000C0D4ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5555E26F1AEBF73F003CF3BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5555E2AC1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
+				5555E2A71AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
+				5555E2961AEBF77C003CF3BB /* SCAPI.m in Sources */,
+				5555E2B11AEBF9F6003CF3BB /* SCUserRequest.m in Sources */,
+				5555E2BD1AEC00F4003CF3BB /* SCImageLoader.m in Sources */,
+				5555E29A1AEBF79D003CF3BB /* SCRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5555E27A1AEBF73F003CF3BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */,
+				5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */,
+				5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
+				5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
+				5555E2881AEBF73F003CF3BB /* SoundCloudUtilsTests.m in Sources */,
+				5555E2B21AEBF9F6003CF3BB /* SCUserRequest.m in Sources */,
+				5555E29B1AEBF79D003CF3BB /* SCRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		558BFCC51AD1B4FC0066E039 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,35 +616,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55F0357E1AD62F1000C0D4ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5510CFEC1AE1D10500A6EB9A /* CKImageLoader.m in Sources */,
-				55F035C01AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */,
-				55F035B61AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
-				55F035B11AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
-				55F035A71AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
-				55D328491ADADF8900DC0311 /* CKSoundCloudUserRequest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55F035891AD62F1000C0D4ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55F035B21AD6392C00C0D4ED /* CKSoundCloudResolveRequest.m in Sources */,
-				55F035971AD62F1000C0D4ED /* ChallengeKitTests.m in Sources */,
-				55F035A81AD62F5800C0D4ED /* CKSoundCloud.m in Sources */,
-				5510CFF61AE6FDFF00A6EB9A /* NSURLCKUtilsTest.m in Sources */,
-				55F035C11AD64FD100C0D4ED /* NSURL+CKUtils.m in Sources */,
-				55F035B71AD6393D00C0D4ED /* CKSoundCloudRequest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5555E2811AEBF73F003CF3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5555E2731AEBF73F003CF3BB /* SoundCloudUtils */;
+			targetProxy = 5555E2801AEBF73F003CF3BB /* PBXContainerItemProxy */;
+		};
+		5555E2831AEBF73F003CF3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 558BFCC81AD1B4FC0066E039 /* Challenge */;
+			targetProxy = 5555E2821AEBF73F003CF3BB /* PBXContainerItemProxy */;
+		};
+		5555E28A1AEBF73F003CF3BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5555E2731AEBF73F003CF3BB /* SoundCloudUtils */;
+			targetProxy = 5555E2891AEBF73F003CF3BB /* PBXContainerItemProxy */;
+		};
 		558BFCE41AD1B4FD0066E039 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 558BFCC81AD1B4FC0066E039 /* Challenge */;
@@ -624,21 +643,6 @@
 			isa = PBXTargetDependency;
 			target = 558BFCF51AD1B52B0066E039 /* Memory */;
 			targetProxy = 558BFCFF1AD1B52B0066E039 /* PBXContainerItemProxy */;
-		};
-		55F035901AD62F1000C0D4ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55F035821AD62F1000C0D4ED /* ChallengeKit */;
-			targetProxy = 55F0358F1AD62F1000C0D4ED /* PBXContainerItemProxy */;
-		};
-		55F035921AD62F1000C0D4ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 558BFCC81AD1B4FC0066E039 /* Challenge */;
-			targetProxy = 55F035911AD62F1000C0D4ED /* PBXContainerItemProxy */;
-		};
-		55F035991AD62F1000C0D4ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55F035821AD62F1000C0D4ED /* ChallengeKit */;
-			targetProxy = 55F035981AD62F1000C0D4ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -662,6 +666,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5555E28D1AEBF73F003CF3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SoundCloudUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5555E28E1AEBF73F003CF3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SoundCloudUtils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5555E28F1AEBF73F003CF3BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SoundCloudUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge.app/Challenge";
+			};
+			name = Debug;
+		};
+		5555E2901AEBF73F003CF3BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SoundCloudUtilsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge.app/Challenge";
+			};
+			name = Release;
+		};
 		558BFCEA1AD1B4FD0066E039 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -820,83 +910,25 @@
 			};
 			name = Release;
 		};
-		55F0359D1AD62F1000C0D4ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChallengeKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		55F0359E1AD62F1000C0D4ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ChallengeKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		55F035A11AD62F1000C0D4ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChallengeKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge.app/Challenge";
-			};
-			name = Debug;
-		};
-		55F035A21AD62F1000C0D4ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ChallengeKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge.app/Challenge";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5555E2911AEBF73F003CF3BB /* Build configuration list for PBXNativeTarget "SoundCloudUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5555E28D1AEBF73F003CF3BB /* Debug */,
+				5555E28E1AEBF73F003CF3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5555E2921AEBF73F003CF3BB /* Build configuration list for PBXNativeTarget "SoundCloudUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5555E28F1AEBF73F003CF3BB /* Debug */,
+				5555E2901AEBF73F003CF3BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		558BFCC41AD1B4FC0066E039 /* Build configuration list for PBXProject "Challenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -929,24 +961,6 @@
 			buildConfigurations = (
 				558BFD031AD1B52B0066E039 /* Debug */,
 				558BFD041AD1B52B0066E039 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55F0359C1AD62F1000C0D4ED /* Build configuration list for PBXNativeTarget "ChallengeKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55F0359D1AD62F1000C0D4ED /* Debug */,
-				55F0359E1AD62F1000C0D4ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55F035A01AD62F1000C0D4ED /* Build configuration list for PBXNativeTarget "ChallengeKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55F035A11AD62F1000C0D4ED /* Debug */,
-				55F035A21AD62F1000C0D4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

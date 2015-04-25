@@ -11,7 +11,7 @@
 #import "MMCollectionViewCell.h"
 #import "NSArray+MMGameSet.h"
 
-#import <ChallengeKit/ChallengeKit.h>
+#import <SoundCloudUtils/SoundCloudUtils.h>
 
 NSString *const MMCollectionViewDidOpenPairNotification = @"MMCollectionViewDidOpenPairNotification";
 NSString *const MMCollectionViewOpenedIndexesKey = @"MMCollectionViewOpenedIndexesKey";
@@ -47,7 +47,7 @@ typedef void(^FlipAnimationCompletionBlock)(BOOL finished);
 
 - (void)_resetCellsForIndexPaths:(NSArray *)indexPaths collectionView:(UICollectionView *)collectionView delay:(NSTimeInterval)delay {
   BOOL allOpenedItemsEqual = [NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:indexPaths] equalBlock:^BOOL(NSDictionary *track1, NSDictionary *track2) {
-    return [track1[[CKSoundCloud artworkURLKey]] isEqual:track2[[CKSoundCloud artworkURLKey]]];
+    return [track1[[SCAPI artworkURLKey]] isEqual:track2[[SCAPI artworkURLKey]]];
   }];
   
   if (!allOpenedItemsEqual) {
