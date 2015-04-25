@@ -10,7 +10,7 @@
 
 #import "MMCollectionViewCell.h"
 #import "MMCollectionViewController.h"
-#import "NSArray+MMGameSet.h"
+#import "NSArray+MMUtils.h"
 #import "MMCollectionView.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -44,6 +44,7 @@
   }
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
+  [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
 }
 
 #pragma mark Properties
@@ -73,7 +74,7 @@
   SCUserRequest *request = [SCUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
       if (!error) {
-        [self.collectionViewController setTracks:[NSArray shuffledFromArray:[response arrayByAddingObjectsFromArray:response] maxCount:4]];
+        [self.collectionViewController setTracks:response];
         [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
       }
       [self.activityIndicator stopAnimating];

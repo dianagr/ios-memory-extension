@@ -18,7 +18,7 @@
 
 @property (weak, nonatomic) id<MMCollectionViewControllerDelegate> delegate;
 
-/*! Set sound cloud tracks for this collection view.
+/*! Set sound cloud tracks for this collection view and use maximum kMaxDifferentItemsCount for the memory game.
  @param Array of NSDictionary objects representing a track on SoundCloud.
  */
 - (void)setTracks:(NSArray /*of NSDictionary*/ *)tracks;

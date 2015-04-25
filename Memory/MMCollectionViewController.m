@@ -9,10 +9,14 @@
 #import "MMCollectionViewController.h"
 
 #import "MMCollectionViewCell.h"
-#import "NSArray+MMGameSet.h"
+#import "NSArray+MMUtils.h"
 #import "MMCollectionView.h"
 
 #import <SoundCloudUtils/SoundCloudUtils.h>
+
+static const NSUInteger kIdenticalItemsCount = 2;
+static const NSUInteger kMaxDifferentItemsCount = 4;
+static const NSTimeInterval kAnimationDelay = 0.5;
 
 @interface MMCollectionViewController ()
 @property (strong, nonatomic) NSMutableArray *flippedIndexPaths;
@@ -22,6 +26,14 @@
 @implementation MMCollectionViewController
 
 #pragma mark Properties
+
+- (void)setTracks:(NSArray *)tracks {
+  NSArray *strippedTracks = [NSArray subarrayFromArray:tracks maxRange:NSMakeRange(0, kMaxDifferentItemsCount)];
+  for (NSUInteger count = 1; count < kIdenticalItemsCount; count++) {
+    strippedTracks = [strippedTracks arrayByAddingObjectsFromArray:strippedTracks];
+  }
+  _tracks = [NSArray shuffledFromArray:strippedTracks];
+}
 
 - (NSMutableArray *)flippedIndexPaths {
   if (!_flippedIndexPaths) {
@@ -59,11 +71,14 @@
 #pragma mark UICollectionViewDelegate
 
 - (void)collectionView:(MMCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  [collectionView openCellsAtIndexPaths:@[indexPath] animated:YES completion:^(BOOL finished) {
-    [self.flippedIndexPaths addObject:indexPath];
-    if (self.flippedIndexPaths.count == 2) {
+  [collectionView openCellsAtIndexPaths:@[indexPath] animated:YES completion:^(NSIndexPath *flippedIndexPath) {
+    [self.flippedIndexPaths addObject:flippedIndexPath];
+    if (self.flippedIndexPaths.count == kIdenticalItemsCount) {
       if (![NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:self.flippedIndexPaths]]) {
-        [collectionView closeCellsAtIndexPaths:[self.flippedIndexPaths copy] animated:YES completion:nil];
+        NSArray *flippedIndexPaths = [self.flippedIndexPaths copy];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kAnimationDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+          [collectionView closeCellsAtIndexPaths:flippedIndexPaths animated:YES completion:nil];
+        });
       }
       [self.flippedIndexPaths removeAllObjects];
     }

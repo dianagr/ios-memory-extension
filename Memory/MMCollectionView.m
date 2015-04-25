@@ -14,13 +14,6 @@ static const CGFloat kMMUIiewAnimationDuration = 0.2;
 
 @implementation MMCollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
-  if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
-    [self registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
-  }
-  return self;
-}
-
 - (void)openCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   [self _flipCells:YES atIndexPaths:indexPaths animated:animated completion:completion];
 }
@@ -34,15 +27,28 @@ static const CGFloat kMMUIiewAnimationDuration = 0.2;
 - (void)_flipCells:(BOOL)opened atIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   for (NSIndexPath *indexPath in indexPaths) {
     MMCollectionViewCell *cell = (MMCollectionViewCell *)[self cellForItemAtIndexPath:indexPath];
-    if (animated) {
-      [UIView transitionWithView:cell.contentView duration:kMMUIiewAnimationDuration options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
-        cell.flippedUp = opened;
-      } completion:completion];
-    } else {
+    if (cell.flippedUp != opened) {
+      [self _flipCell:cell opened:opened animated:animated completion:^(BOOL finished) {
+        if (completion) {
+          completion(indexPath);
+        }
+      }];
+    }
+  }
+}
+
+- (void)_flipCell:(MMCollectionViewCell *)cell opened:(BOOL)opened animated:(BOOL)animated completion:(void (^)(BOOL finished))completion {
+  if (animated) {
+    [UIView transitionWithView:cell.contentView duration:kMMUIiewAnimationDuration options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
       cell.flippedUp = opened;
+    } completion:completion];
+  } else {
+    cell.flippedUp = opened;
+    if (completion) {
       completion(YES);
     }
   }
+
 }
 
 @end
