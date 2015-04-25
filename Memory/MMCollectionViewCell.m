@@ -14,7 +14,6 @@ static const CGFloat kDefaultCornerRadius = 4;
 static const CGFloat kDefaultBorderWidth = 0.5;
 
 @interface MMCollectionViewCell () <SCImageLoaderDelegate>
-@property (strong, nonatomic) UIImageView *backImageView;
 @property (strong, nonatomic) UIImageView *frontImageView;
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) SCImageLoader *imageLoader;
@@ -28,11 +27,7 @@ static const CGFloat kDefaultBorderWidth = 0.5;
     self.contentView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.contentView.layer.borderWidth = kDefaultBorderWidth;
     self.contentView.layer.masksToBounds = YES;
-
-    _backImageView = [UIImageView new];
-    _backImageView.contentMode = UIViewContentModeScaleToFill;
-    _backImageView.image = [UIImage imageNamed:@"back"];
-    [self.contentView addSubview:_backImageView];
+    self.contentView.backgroundColor = [UIColor lightGrayColor];
 
     _frontImageView = [UIImageView new];
     _frontImageView.contentMode = UIViewContentModeScaleToFill;
@@ -45,12 +40,9 @@ static const CGFloat kDefaultBorderWidth = 0.5;
     [_titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
     [self.contentView addSubview:_titleLabel];
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(_backImageView, _frontImageView, _titleLabel);
-    _backImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = NSDictionaryOfVariableBindings(_frontImageView, _titleLabel);
     _frontImageView.translatesAutoresizingMaskIntoConstraints = NO;
     _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_backImageView]|" options:0 metrics:nil views:views]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_backImageView]|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_frontImageView]|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_frontImageView][_titleLabel]|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_titleLabel]|" options:0 metrics:nil views:views]];
@@ -66,7 +58,7 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 
 - (void)setFlippedUp:(BOOL)flippedUp {
   _flippedUp = flippedUp;
-  self.backImageView.hidden = flippedUp;
+  self.contentView.backgroundColor = flippedUp ? [UIColor whiteColor] : [UIColor lightGrayColor];
   self.frontImageView.hidden = !flippedUp;
 }
 

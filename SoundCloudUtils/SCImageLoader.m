@@ -24,7 +24,7 @@
 }
 
 - (void)loadImageWithURL:(NSURL *)url {
-  UIImage *image = [self _cahcedImageForURL:url];
+  UIImage *image = [self _cachedImageForURL:url];
   if (image) {
     [self _didLoadImage:image];
   } else {
@@ -38,7 +38,7 @@
 
 #pragma mark Private
 
-- (UIImage *)_cahcedImageForURL:(NSURL *)url {
+- (UIImage *)_cachedImageForURL:(NSURL *)url {
   NSData *data = [[[self class] sharedCache] objectForKey:url];
   return [UIImage imageWithData:data];
 }

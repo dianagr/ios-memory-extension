@@ -20,7 +20,8 @@
   static NSDictionary *authCredentials = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    authCredentials = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"api_key" ofType:@"plist"]];
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"api_key" ofType:@"plist"];
+    authCredentials = [NSDictionary dictionaryWithContentsOfFile:path];
   });
   return authCredentials;
 }

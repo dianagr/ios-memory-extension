@@ -70,8 +70,10 @@
 - (void)_loadTracksForUserId:(NSString *)userId {
   SCUserRequest *request = [SCUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self.collectionViewController setTracks:[NSArray shuffledFromArray:[response arrayByAddingObjectsFromArray:response] maxCount:4]];
-      [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+      if (!error) {
+        [self.collectionViewController setTracks:[NSArray shuffledFromArray:[response arrayByAddingObjectsFromArray:response] maxCount:4]];
+        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+      }
       [self.activityIndicator stopAnimating];
     });
   }];
