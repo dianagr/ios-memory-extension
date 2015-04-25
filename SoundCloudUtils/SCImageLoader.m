@@ -54,19 +54,19 @@
     }
     
     [[[self class] sharedCache] setObject:data forKey:url];
-    dispatch_async(dispatch_get_main_queue(), ^{
-      UIImage *image = [UIImage imageWithData:data];
-      if (image) {
-        [self _didLoadImage:image];
-      }
-    });
+    UIImage *image = [UIImage imageWithData:data];
+    if (image) {
+      [self _didLoadImage:image];
+    }
   }];
   [self.task resume];
 }
 
 - (void)_didLoadImage:(UIImage *)image {
-  id<SCImageLoaderDelegate> delegate = self.delegate;
-  [delegate imageLoader:self didLoadImage:image];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    id<SCImageLoaderDelegate> delegate = self.delegate;
+    [delegate imageLoader:self didLoadImage:image];
+  });
 }
 
 @end

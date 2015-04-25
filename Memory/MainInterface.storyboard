@@ -19,6 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-yR-kOT">
+                                <rect key="frame" x="-9" y="0.0" width="618" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7oq-ko-wxy">
+                                    <rect key="frame" x="0.0" y="0.0" width="618" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4b-7B-ObQ">
                                 <rect key="frame" x="16" y="20" width="55" height="30"/>
                                 <constraints>
@@ -75,11 +83,13 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rGB-pz-vNI" firstAttribute="trailing" secondItem="Mem-kN-pK3" secondAttribute="trailing" id="3uJ-jp-Vsd"/>
+                            <constraint firstItem="Wcc-yR-kOT" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" constant="-25" id="5YX-BP-yz1"/>
                             <constraint firstItem="rGB-pz-vNI" firstAttribute="top" secondItem="VsS-jD-ENu" secondAttribute="bottom" constant="7" id="77r-Sc-YWB"/>
                             <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="4Tt-MQ-f6v" secondAttribute="bottom" constant="290" id="9Z4-xN-zcP"/>
+                            <constraint firstItem="Wcc-yR-kOT" firstAttribute="centerX" secondItem="4Tt-MQ-f6v" secondAttribute="centerX" id="Aqu-Rz-n0h"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="trailing" secondItem="wbc-yd-nQP" secondAttribute="trailingMargin" id="C31-bd-TYt"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leading" id="E56-GW-kTq"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="leading" secondItem="S4b-7B-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="FFa-XW-RBU"/>
@@ -87,7 +97,9 @@
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" id="JJf-Dq-1Xr"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="rGB-pz-vNI" secondAttribute="bottom" id="PpI-uP-A1F"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="VsS-jD-ENu" secondAttribute="bottom" constant="8" symbolic="YES" id="QFb-QF-QvN"/>
+                            <constraint firstItem="Wcc-yR-kOT" firstAttribute="bottom" secondItem="d5i-Ba-RvD" secondAttribute="top" id="XP9-dv-HFS"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="firstBaseline" secondItem="S4b-7B-ObQ" secondAttribute="firstBaseline" id="XSE-jV-0Jq"/>
+                            <constraint firstItem="Wcc-yR-kOT" firstAttribute="top" secondItem="wbc-yd-nQP" secondAttribute="top" id="Y1R-JJ-u2v"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="firstBaseline" secondItem="S4b-7B-ObQ" secondAttribute="baseline" id="cT9-fE-ttZ"/>
                             <constraint firstItem="4Tt-MQ-f6v" firstAttribute="trailing" secondItem="VsS-jD-ENu" secondAttribute="trailing" id="fYZ-7J-doa"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="S4b-7B-ObQ" secondAttribute="bottom" constant="8" id="gIM-fA-XDv"/>

@@ -46,6 +46,7 @@
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
   [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
+
 }
 
 #pragma mark Properties
@@ -72,7 +73,8 @@
 - (void)_resolvePermalink:(NSURL *)url {
   SCResolveRequest *request = [SCResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *error) {
     if (!error) {
-      [self _loadTracksForUserId:response[[SCAPI userIdKey]]];
+      NSString *userId = response[[SCAPI userIdKey]];
+      [self _loadTracksForUserId:userId];
     } else {
       dispatch_async(dispatch_get_main_queue(), ^{
         [self _setError:error];

@@ -27,7 +27,7 @@ static const CGFloat kDefaultBorderWidth = 0.5;
     self.contentView.layer.borderColor = [UIColor darkGrayColor].CGColor;
     self.contentView.layer.borderWidth = kDefaultBorderWidth;
     self.contentView.layer.masksToBounds = YES;
-    self.contentView.backgroundColor = [UIColor lightGrayColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
 
     _imageView = [UIImageView new];
     _imageView.contentMode = UIViewContentModeScaleToFill;
@@ -58,7 +58,6 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 
 - (void)setFlippedUp:(BOOL)flippedUp {
   _flippedUp = flippedUp;
-  self.contentView.backgroundColor = flippedUp ? [UIColor whiteColor] : [UIColor lightGrayColor];
   self.imageView.hidden = !flippedUp;
 }
 

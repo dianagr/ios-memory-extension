@@ -13,6 +13,7 @@ IB_DESIGNABLE
 @interface MMCollectionViewCell : UICollectionViewCell
 
 @property (assign, nonatomic, getter=isFlippedUp) IBInspectable BOOL flippedUp;
+
 @property (strong, nonatomic) NSDictionary *track;
 
 @end
