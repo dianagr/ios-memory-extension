@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet MMCollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (strong, nonatomic) MMCollectionViewController *collectionViewController;
 @end
 
@@ -58,14 +59,26 @@
 
 #pragma mark Private
 
+- (void)_setError:(NSError *)error {
+  self.statusLabel.text = error.localizedDescription;
+  self.statusLabel.hidden = NO;
+}
+
 - (IBAction)_didTapCancel:(UIButton *)sender {
   self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
   [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
 }
 
 - (void)_resolvePermalink:(NSURL *)url {
-  SCResolveRequest *request = [SCResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *requestError) {
-    [self _loadTracksForUserId:response[[SCAPI userIdKey]]];
+  SCResolveRequest *request = [SCResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *error) {
+    if (!error) {
+      [self _loadTracksForUserId:response[[SCAPI userIdKey]]];
+    } else {
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [self _setError:error];
+        [self.activityIndicator stopAnimating];
+      });
+    }
   }];
   [request resume];
 }
@@ -76,6 +89,8 @@
       if (!error) {
         [self.collectionViewController setTracks:response];
         [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+      } else {
+        [self _setError:error];
       }
       [self.activityIndicator stopAnimating];
     });
