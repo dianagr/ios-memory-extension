@@ -10,8 +10,8 @@
 
 @implementation NSURL (SCUtils)
 
-+ (instancetype)URLWithHost:(NSString *)host path:(NSString *)path queryParams:(NSDictionary *)params {
-  NSString *urlString = host;
++ (instancetype)URLWithScheme:(NSString *)scheme host:(NSString *)host path:(NSString *)path queryParams:(NSDictionary *)params {
+  NSString *urlString = [NSString stringWithFormat:@"%@://%@", scheme, host];
   if (path) {
     urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"/%@", path]];
   }

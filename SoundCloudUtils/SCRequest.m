@@ -18,16 +18,16 @@
 @implementation SCRequest
 
 + (instancetype)newRequestGETWithPath:(NSString *)path params:(NSDictionary *)params completion:(SCRequestCompletion)completion {
-  NSURL *url = [NSURL URLWithHost:[SCAPI host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
+  NSURL *url = [NSURL URLWithScheme:[SCAPI scheme] host:[SCAPI host] path:path queryParams:[self _appendAuthenticationParamsToQueryParams:params]];
   SCRequest *request = [SCRequest new];
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     NSJSONSerialization *jsonResponse = nil;
     if (error) {
       NSLog(@"Error loading data: %@", error.localizedDescription);
     } else {
-      jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+      jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
       if (error) {
-        NSLog(@"Error parsin json: %@", error.localizedDescription);
+        NSLog(@"Error parsing json: %@", error.localizedDescription);
       }
     }
     if (completion) {

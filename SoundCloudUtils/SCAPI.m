@@ -10,8 +10,12 @@
 
 @implementation SCAPI
 
++ (NSString *)scheme {
+  return @"https";
+}
+
 + (NSString *)host {
-  return @"https://api.soundcloud.com";
+  return @"api.soundcloud.com";
 }
 
 #pragma mark Client Id

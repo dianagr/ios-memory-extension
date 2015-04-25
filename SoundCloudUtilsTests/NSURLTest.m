@@ -17,13 +17,14 @@
 @implementation NSURLTest
 
 - (void)testBuildURL {
-  XCTAssertEqualObjects([NSURL URLWithHost:@"host" path:nil queryParams:nil], [NSURL URLWithString:@"host"]);
   NSDictionary *params = nil;
-  XCTAssertEqualObjects([NSURL URLWithHost:@"host" path:@"path" queryParams:params], [NSURL URLWithString:@"host/path"]);
+  XCTAssertEqualObjects([NSURL URLWithScheme:@"scheme" host:@"host" path:nil queryParams:params], [NSURL URLWithString:@"scheme://host"]);
+  XCTAssertEqualObjects([NSURL URLWithScheme:@"scheme" host:@"host" path:@"path" queryParams:params], [NSURL URLWithString:@"scheme://host/path"]);
   params = @{@"param1": @"value1"};
-  XCTAssertEqualObjects([NSURL URLWithHost:@"host" path:@"path" queryParams:params], [NSURL URLWithString:@"host/path?param1=value1"]);
+  XCTAssertEqualObjects([NSURL URLWithScheme:@"scheme" host:@"host" path:@"path" queryParams:params], [NSURL URLWithString:@"scheme://host/path?param1=value1"]);
   params = @{@"param1": @"value1", @"param2": @"value2"};
-  XCTAssertEqualObjects([NSURL URLWithHost:@"host" path:@"path" queryParams:params], [NSURL URLWithString:@"host/path?param1=value1&param2=value2"]);
+  NSURL *url = [NSURL URLWithScheme:@"scheme" host:@"host" path:@"path" queryParams:params];
+  XCTAssert([url isEqual:[NSURL URLWithString:@"scheme://host/path?param1=value1&param2=value2"]] || [url isEqual:[NSURL URLWithString:@"scheme://host/path?param2=value2&param1=value1"]]);
 }
 
 @end

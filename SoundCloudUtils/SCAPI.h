@@ -10,6 +10,8 @@
 
 @interface SCAPI : NSObject
 
++ (NSString *)scheme;
+
 + (NSString *)host;
 
 + (NSString *)clientId;

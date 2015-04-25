@@ -36,6 +36,7 @@
 		5555E2BD1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
 		5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
 		5555E3151AEC14BA003CF3BB /* MMCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3141AEC14BA003CF3BB /* MMCollectionView.m */; };
+		5555E3171AEC2A0B003CF3BB /* SCRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -141,6 +142,7 @@
 		5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageLoader.m; sourceTree = "<group>"; };
 		5555E3131AEC14BA003CF3BB /* MMCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionView.h; sourceTree = "<group>"; };
 		5555E3141AEC14BA003CF3BB /* MMCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionView.m; sourceTree = "<group>"; };
+		5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRequestTest.m; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -248,6 +250,7 @@
 				5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */,
 				5555E2851AEBF73F003CF3BB /* Supporting Files */,
 				5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */,
+				5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */,
 			);
 			path = SoundCloudUtilsTests;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */,
+				5555E3171AEC2A0B003CF3BB /* SCRequestTest.m in Sources */,
 				5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */,
 				5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
 				5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
