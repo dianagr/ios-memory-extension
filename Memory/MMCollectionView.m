@@ -1,0 +1,48 @@
+//
+//  MMCollectionView.m
+//  Challenge
+//
+//  Created by Diana Gren on 4/25/15.
+//  Copyright (c) 2015 Diana Gren. All rights reserved.
+//
+
+#import "MMCollectionView.h"
+
+#import "MMCollectionViewCell.h"
+
+static const CGFloat kMMUIiewAnimationDuration = 0.2;
+
+@implementation MMCollectionView
+
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
+  if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
+    [self registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
+  }
+  return self;
+}
+
+- (void)openCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+  [self _flipCells:YES atIndexPaths:indexPaths animated:animated completion:completion];
+}
+
+- (void)closeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+  [self _flipCells:NO atIndexPaths:indexPaths animated:animated completion:completion];
+}
+
+#pragma mark Private
+
+- (void)_flipCells:(BOOL)opened atIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+  for (NSIndexPath *indexPath in indexPaths) {
+    MMCollectionViewCell *cell = (MMCollectionViewCell *)[self cellForItemAtIndexPath:indexPath];
+    if (animated) {
+      [UIView transitionWithView:cell.contentView duration:kMMUIiewAnimationDuration options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+        cell.flippedUp = opened;
+      } completion:completion];
+    } else {
+      cell.flippedUp = opened;
+      completion(YES);
+    }
+  }
+}
+
+@end

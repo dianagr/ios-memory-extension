@@ -11,6 +11,7 @@
 #import "MMCollectionViewCell.h"
 #import "MMCollectionViewController.h"
 #import "NSArray+MMGameSet.h"
+#import "MMCollectionView.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <SoundCloudUtils/SoundCloudUtils.h>
@@ -18,7 +19,7 @@
 @interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet MMCollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) MMCollectionViewController *collectionViewController;
 @end
@@ -43,8 +44,9 @@
   }
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
-  [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
 }
+
+#pragma mark Properties
 
 - (MMCollectionViewController *)collectionViewController {
   if (!_collectionViewController) {
@@ -55,7 +57,7 @@
 
 #pragma mark Private
 
-- (IBAction)didTapCancel:(UIButton *)sender {
+- (IBAction)_didTapCancel:(UIButton *)sender {
   self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
   [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
 }

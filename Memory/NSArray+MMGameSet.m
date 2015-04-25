@@ -18,13 +18,9 @@
   }
 }
 
-+ (BOOL)isEqualAllItems:(NSArray *)items equalBlock:(NSArrayIsEqualBlock)isEqual {
-  for (id object in items) {
-    if (!isEqual(object, items.firstObject)) {
-      return NO;
-    }
-  }
-  return YES;
++ (BOOL)isEqualAllItems:(NSArray *)items {
+  NSSet *itemSet = [NSSet setWithArray:items];
+  return itemSet.count == 1;
 }
 
 #pragma mark Private

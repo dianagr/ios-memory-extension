@@ -9,11 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-extern NSString *const MMCollectionViewDidOpenPairNotification;
-extern NSString *const MMCollectionViewOpenedIndexesKey;
+@class MMCollectionViewController;
+@protocol MMCollectionViewControllerDelegate <NSObject>
+- (void)collectionViewController:(MMCollectionViewController *)controller didSelectIndexPath:(NSIndexPath *)indexPath;
+@end
 
 @interface MMCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
 
-- (void)setTracks:(NSArray *)tracks;
+@property (weak, nonatomic) id<MMCollectionViewControllerDelegate> delegate;
+
+/*! Set sound cloud tracks for this collection view.
+ @param Array of NSDictionary objects representing a track on SoundCloud.
+ */
+- (void)setTracks:(NSArray /*of NSDictionary*/ *)tracks;
 
 @end

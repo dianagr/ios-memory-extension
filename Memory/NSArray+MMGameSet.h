@@ -21,6 +21,6 @@ typedef BOOL(^NSArrayIsEqualBlock)(id obj1, id obj2);
  @param items The array of items to check if matching.
  @param matching The block to use for checking equality between items.
  */
-+ (BOOL)isEqualAllItems:(NSArray *)items equalBlock:(NSArrayIsEqualBlock)isEqual;
++ (BOOL)isEqualAllItems:(NSArray *)items;
 
 @end

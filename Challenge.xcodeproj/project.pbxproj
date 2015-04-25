@@ -34,6 +34,7 @@
 		5555E2BC1AEC00F4003CF3BB /* SCImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5555E2BD1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
 		5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */; };
+		5555E3151AEC14BA003CF3BB /* MMCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3141AEC14BA003CF3BB /* MMCollectionView.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -136,6 +137,8 @@
 		5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTest.m; sourceTree = "<group>"; };
 		5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageLoader.h; sourceTree = "<group>"; };
 		5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageLoader.m; sourceTree = "<group>"; };
+		5555E3131AEC14BA003CF3BB /* MMCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionView.h; sourceTree = "<group>"; };
+		5555E3141AEC14BA003CF3BB /* MMCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionView.m; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -326,6 +329,8 @@
 				55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */,
 				55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */,
 				55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */,
+				5555E3131AEC14BA003CF3BB /* MMCollectionView.h */,
+				5555E3141AEC14BA003CF3BB /* MMCollectionView.m */,
 				5510CFF91AE7192B00A6EB9A /* NSArray+MMGameSet.h */,
 				5510CFFA1AE7192B00A6EB9A /* NSArray+MMGameSet.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
@@ -610,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */,
+				5555E3151AEC14BA003CF3BB /* MMCollectionView.m in Sources */,
 				55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */,
 				5510CFFB1AE7192B00A6EB9A /* NSArray+MMGameSet.m in Sources */,
 				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
@@ -920,6 +926,7 @@
 				5555E28E1AEBF73F003CF3BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5555E2921AEBF73F003CF3BB /* Build configuration list for PBXNativeTarget "SoundCloudUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -928,6 +935,7 @@
 				5555E2901AEBF73F003CF3BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		558BFCC41AD1B4FC0066E039 /* Build configuration list for PBXProject "Challenge" */ = {
 			isa = XCConfigurationList;
