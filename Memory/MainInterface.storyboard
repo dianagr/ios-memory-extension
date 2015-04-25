@@ -55,7 +55,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsS-jD-ENu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsS-jD-ENu">
                                 <rect key="frame" x="79" y="24" width="505" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -70,21 +70,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGB-pz-vNI">
+                                <rect key="frame" x="0.0" y="57" width="600" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rGB-pz-vNI" firstAttribute="trailing" secondItem="Mem-kN-pK3" secondAttribute="trailing" id="3uJ-jp-Vsd"/>
+                            <constraint firstItem="rGB-pz-vNI" firstAttribute="top" secondItem="VsS-jD-ENu" secondAttribute="bottom" constant="7" id="77r-Sc-YWB"/>
                             <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="4Tt-MQ-f6v" secondAttribute="bottom" constant="290" id="9Z4-xN-zcP"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="trailing" secondItem="wbc-yd-nQP" secondAttribute="trailingMargin" id="C31-bd-TYt"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leading" id="E56-GW-kTq"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="leading" secondItem="S4b-7B-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="FFa-XW-RBU"/>
                             <constraint firstAttribute="centerX" secondItem="7I3-r8-H46" secondAttribute="centerX" constant="-1" id="IXa-gc-Q0e"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" id="JJf-Dq-1Xr"/>
+                            <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="rGB-pz-vNI" secondAttribute="bottom" id="PpI-uP-A1F"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="VsS-jD-ENu" secondAttribute="bottom" constant="8" symbolic="YES" id="QFb-QF-QvN"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="firstBaseline" secondItem="S4b-7B-ObQ" secondAttribute="firstBaseline" id="XSE-jV-0Jq"/>
                             <constraint firstItem="VsS-jD-ENu" firstAttribute="firstBaseline" secondItem="S4b-7B-ObQ" secondAttribute="baseline" id="cT9-fE-ttZ"/>
                             <constraint firstItem="4Tt-MQ-f6v" firstAttribute="trailing" secondItem="VsS-jD-ENu" secondAttribute="trailing" id="fYZ-7J-doa"/>
                             <constraint firstItem="Mem-kN-pK3" firstAttribute="top" secondItem="S4b-7B-ObQ" secondAttribute="bottom" constant="8" id="gIM-fA-XDv"/>
                             <constraint firstAttribute="trailing" secondItem="Mem-kN-pK3" secondAttribute="trailing" id="iuY-db-Zac"/>
+                            <constraint firstItem="rGB-pz-vNI" firstAttribute="leading" secondItem="Mem-kN-pK3" secondAttribute="leading" id="noP-Wm-qkL"/>
                             <constraint firstItem="S4b-7B-ObQ" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" id="t3d-8r-PeN"/>
                             <constraint firstAttribute="centerY" secondItem="7I3-r8-H46" secondAttribute="centerY" constant="-1" id="uHS-hr-p7y"/>
                             <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="Mem-kN-pK3" secondAttribute="bottom" id="uaS-Uy-bnf"/>
