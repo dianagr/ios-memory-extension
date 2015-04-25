@@ -23,11 +23,11 @@
   request.task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     NSJSONSerialization *jsonResponse = nil;
     if (error) {
-      NSLog(@"Error loading data: %@", error.localizedDescription);
+      NSLog(@"Error loading data: %@, URL: %@", error.localizedDescription, response.URL);
     } else {
       jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
       if (error) {
-        NSLog(@"Error parsing json: %@", error.localizedDescription);
+        NSLog(@"Error parsing JSON: %@, URL: %@", error.localizedDescription, response.URL);
       }
     }
     if (completion) {
@@ -42,7 +42,7 @@
 + (NSDictionary *)_appendAuthenticationParamsToQueryParams:(NSDictionary *)queryParams {
   NSMutableDictionary *params = queryParams ? [queryParams mutableCopy] : [NSMutableDictionary new];
   if ([SCAPI clientId]) {
-    params[[SCAPI clientIdKey]] = [SCAPI clientId];
+    params[kSCAPIFieldClientId] = [SCAPI clientId];
   }
   return params;
 }

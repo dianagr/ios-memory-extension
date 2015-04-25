@@ -8,20 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+//! Field for client ID used for app authorization
+extern NSString *const kSCAPIFieldClientId;
+
+//! Field for the SoundCloud user id
+extern NSString *const kSCAPIFieldUserId;
+
+//! Field for artwork URL of a track
+extern NSString *const kSCAPIFieldArtworkURL;
+
 @interface SCAPI : NSObject
 
 + (NSString *)scheme;
 
 + (NSString *)host;
 
+//! Client ID used for authorizing the app
 + (NSString *)clientId;
-
-#pragma mark API fields
-
-+ (NSString *)clientIdKey;
-
-+ (NSString *)userIdKey;
-
-+ (NSString *)artworkURLKey;
 
 @end

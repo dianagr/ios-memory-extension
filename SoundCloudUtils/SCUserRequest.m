@@ -10,7 +10,7 @@
 
 @implementation SCUserRequest
 
-+ (instancetype)newTracksListRequestForUserId:(NSString *)userId completion:(SCRequestCompletion)completion {
++ (instancetype)newTracksListRequestForUserId:(NSNumber *)userId completion:(SCRequestCompletion)completion {
   NSString *path = [NSString stringWithFormat:@"users/%@/tracks", userId];
   return [self newRequestGETWithPath:path params:nil completion:completion];
 }

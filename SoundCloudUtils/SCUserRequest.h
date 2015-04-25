@@ -14,6 +14,6 @@
  @param userId The user id to list tracks for.
  @param completion Completion handler that's called after data has been fetched.
  */
-+ (instancetype)newTracksListRequestForUserId:(NSString *)userId completion:(SCRequestCompletion)completion;
++ (instancetype)newTracksListRequestForUserId:(NSNumber *)userId completion:(SCRequestCompletion)completion;
 
 @end

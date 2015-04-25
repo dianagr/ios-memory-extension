@@ -73,8 +73,7 @@
 - (void)_resolvePermalink:(NSURL *)url {
   SCResolveRequest *request = [SCResolveRequest newRequestWithResolveURL:url completion:^(NSDictionary *response, NSError *error) {
     if (!error) {
-      NSString *userId = response[[SCAPI userIdKey]];
-      [self _loadTracksForUserId:userId];
+      [self _loadTracksForUserId:response.userId];
     } else {
       dispatch_async(dispatch_get_main_queue(), ^{
         [self _setError:error];
@@ -85,7 +84,7 @@
   [request resume];
 }
 
-- (void)_loadTracksForUserId:(NSString *)userId {
+- (void)_loadTracksForUserId:(NSNumber *)userId {
   SCUserRequest *request = [SCUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
       if (!error) {

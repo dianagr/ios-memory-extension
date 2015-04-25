@@ -15,12 +15,12 @@
 @implementation SCImageLoader
 
 + (NSCache *)sharedCache {
-  static NSCache *imageCache = nil;
+  static NSCache *gImageCache = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    imageCache = [[NSCache alloc] init];
+    gImageCache = [[NSCache alloc] init];
   });
-  return imageCache;
+  return gImageCache;
 }
 
 - (void)loadImageWithURL:(NSURL *)url {
@@ -49,14 +49,11 @@
   [self.task cancel];
   self.task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     if (error) {
-      NSLog(@"Image loading error: %@", error.localizedDescription);
-      return;
-    }
-    
-    [[[self class] sharedCache] setObject:data forKey:url];
-    UIImage *image = [UIImage imageWithData:data];
-    if (image) {
-      [self _didLoadImage:image];
+      NSLog(@"Image loading error: %@, URL: %@", error.localizedDescription, response.URL);
+      [self _didError:error];
+    } else {
+      [[[self class] sharedCache] setObject:data forKey:url];
+      [self _didLoadImage:[UIImage imageWithData:data]];
     }
   }];
   [self.task resume];
@@ -66,6 +63,13 @@
   dispatch_async(dispatch_get_main_queue(), ^{
     id<SCImageLoaderDelegate> delegate = self.delegate;
     [delegate imageLoader:self didLoadImage:image];
+  });
+}
+
+- (void)_didError:(NSError *)error {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    id<SCImageLoaderDelegate> delegate = self.delegate;
+    [delegate imageLoader:self didError:error];
   });
 }
 

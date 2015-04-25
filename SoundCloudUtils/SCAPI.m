@@ -8,6 +8,11 @@
 
 #import "SCAPI.h"
 
+NSString *const kSCAPIFieldClientId = @"client_id";
+
+NSString *const kSCAPIFieldUserId = @"user_id";
+NSString *const kSCAPIFieldArtworkURL = @"artwork_url";
+
 @implementation SCAPI
 
 + (NSString *)scheme {
@@ -31,21 +36,7 @@
 }
 
 + (NSString *)clientId {
-  return [self _apiAuthenticationCredentials][[self clientIdKey]];
-}
-
-#pragma mark API fields
-
-+ (NSString *)clientIdKey {
-  return @"client_id";
-}
-
-+ (NSString *)userIdKey {
-  return @"user_id";
-}
-
-+ (NSString *)artworkURLKey {
-  return @"artwork_url";
+  return [self _apiAuthenticationCredentials][kSCAPIFieldClientId];
 }
 
 @end

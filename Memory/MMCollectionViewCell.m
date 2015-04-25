@@ -15,7 +15,6 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 
 @interface MMCollectionViewCell () <SCImageLoaderDelegate>
 @property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) SCImageLoader *imageLoader;
 @end
 
@@ -34,18 +33,10 @@ static const CGFloat kDefaultBorderWidth = 0.5;
     _imageView.hidden = YES;
     [self.contentView addSubview:_imageView];
 
-    _titleLabel = [UILabel new];
-    _titleLabel.hidden = YES;
-    _titleLabel.numberOfLines = 2;
-    [_titleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-    [self.contentView addSubview:_titleLabel];
-
-    NSDictionary *views = NSDictionaryOfVariableBindings(_imageView, _titleLabel);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_imageView);
     _imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_imageView]|" options:0 metrics:nil views:views]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_imageView][_titleLabel]|" options:0 metrics:nil views:views]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_titleLabel]|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_imageView]|" options:0 metrics:nil views:views]];
   }
   return self;
 }
@@ -56,6 +47,8 @@ static const CGFloat kDefaultBorderWidth = 0.5;
   self.imageLoader.delegate = nil;
 }
 
+#pragma mark Properties
+
 - (void)setFlippedUp:(BOOL)flippedUp {
   _flippedUp = flippedUp;
   self.imageView.hidden = !flippedUp;
@@ -63,7 +56,7 @@ static const CGFloat kDefaultBorderWidth = 0.5;
 
 - (void)setTrack:(NSDictionary *)track {
   self.imageLoader.delegate = self;
-  [self.imageLoader loadImageWithURL:[NSURL URLWithString:track[[SCAPI artworkURLKey]]]];
+  [self.imageLoader loadImageWithURL:track.artworkURL];
 }
 
 - (SCImageLoader *)imageLoader {
