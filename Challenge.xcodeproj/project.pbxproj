@@ -10,7 +10,6 @@
 		2262DC0DA6F52E18C30AA668 /* libPods-SoundCloudUtilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A67CC626C5116629AC77D98 /* libPods-SoundCloudUtilsTests.a */; };
 		5510CFFB1AE7192B00A6EB9A /* NSArray+MMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFFA1AE7192B00A6EB9A /* NSArray+MMUtils.m */; };
 		5555E2791AEBF73F003CF3BB /* SoundCloudUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5555E2881AEBF73F003CF3BB /* SoundCloudUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */; };
 		5555E28B1AEBF73F003CF3BB /* SoundCloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; };
 		5555E28C1AEBF73F003CF3BB /* SoundCloudUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5555E2951AEBF77C003CF3BB /* SCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2931AEBF77B003CF3BB /* SCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +44,6 @@
 		558BFCD81AD1B4FC0066E039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD61AD1B4FC0066E039 /* Main.storyboard */; };
 		558BFCDA1AD1B4FC0066E039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
 		558BFCDD1AD1B4FC0066E039 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCDB1AD1B4FC0066E039 /* LaunchScreen.xib */; };
-		558BFCE91AD1B4FD0066E039 /* ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCE81AD1B4FD0066E039 /* ChallengeTests.m */; };
 		558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */; };
 		558BFCFE1AD1B52B0066E039 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */; };
 		558BFD011AD1B52B0066E039 /* Memory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 558BFCF61AD1B52B0066E039 /* Memory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -127,26 +125,25 @@
 		5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundCloudUtils.h; sourceTree = "<group>"; };
 		5555E27E1AEBF73F003CF3BB /* SoundCloudUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5555E2861AEBF73F003CF3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudUtilsTests.m; sourceTree = "<group>"; };
-		5555E2931AEBF77B003CF3BB /* SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAPI.h; sourceTree = "<group>"; };
-		5555E2941AEBF77C003CF3BB /* SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAPI.m; sourceTree = "<group>"; };
-		5555E2971AEBF79D003CF3BB /* SCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRequest.h; sourceTree = "<group>"; };
-		5555E2981AEBF79D003CF3BB /* SCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRequest.m; sourceTree = "<group>"; };
+		5555E2931AEBF77B003CF3BB /* SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SCAPI.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E2941AEBF77C003CF3BB /* SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCAPI.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E2971AEBF79D003CF3BB /* SCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SCRequest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E2981AEBF79D003CF3BB /* SCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCRequest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5555E29C1AEBF84E003CF3BB /* api_key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = api_key.plist; sourceTree = "<group>"; };
-		5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SCUtils.h"; sourceTree = "<group>"; };
-		5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SCUtils.m"; sourceTree = "<group>"; };
-		5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCResolveRequest.h; sourceTree = "<group>"; };
+		5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSURL+SCUtils.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSURL+SCUtils.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SCResolveRequest.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCResolveRequest.m; sourceTree = "<group>"; };
 		5555E2AE1AEBF9F6003CF3BB /* SCUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCUserRequest.h; sourceTree = "<group>"; };
 		5555E2AF1AEBF9F6003CF3BB /* SCUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUserRequest.m; sourceTree = "<group>"; };
-		5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTest.m; sourceTree = "<group>"; };
-		5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCImageLoader.h; sourceTree = "<group>"; };
-		5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCImageLoader.m; sourceTree = "<group>"; };
-		5555E3131AEC14BA003CF3BB /* MMCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionView.h; sourceTree = "<group>"; };
-		5555E3141AEC14BA003CF3BB /* MMCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionView.m; sourceTree = "<group>"; };
-		5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRequestTest.m; sourceTree = "<group>"; };
-		5555E31C1AEC531C003CF3BB /* NSDictionary+SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCAPI.h"; sourceTree = "<group>"; };
-		5555E31D1AEC531C003CF3BB /* NSDictionary+SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCAPI.m"; sourceTree = "<group>"; };
+		5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSURLTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E2BA1AEC00F4003CF3BB /* SCImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SCImageLoader.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E2BB1AEC00F4003CF3BB /* SCImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCImageLoader.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E3131AEC14BA003CF3BB /* MMCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMCollectionView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E3141AEC14BA003CF3BB /* MMCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMCollectionView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCRequestTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E31C1AEC531C003CF3BB /* NSDictionary+SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSDictionary+SCAPI.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5555E31D1AEC531C003CF3BB /* NSDictionary+SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSDictionary+SCAPI.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -159,7 +156,6 @@
 		558BFCDC1AD1B4FC0066E039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		558BFCE21AD1B4FD0066E039 /* ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCE71AD1B4FD0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		558BFCE81AD1B4FD0066E039 /* ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ChallengeTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		558BFCF61AD1B52B0066E039 /* Memory.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Memory.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCF91AD1B52B0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCFA1AD1B52B0066E039 /* MMShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMShareViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -253,7 +249,6 @@
 		5555E2841AEBF73F003CF3BB /* SoundCloudUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5555E2871AEBF73F003CF3BB /* SoundCloudUtilsTests.m */,
 				5555E2851AEBF73F003CF3BB /* Supporting Files */,
 				5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */,
 				5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */,
@@ -322,7 +317,6 @@
 		558BFCE51AD1B4FD0066E039 /* ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				558BFCE81AD1B4FD0066E039 /* ChallengeTests.m */,
 				558BFCE61AD1B4FD0066E039 /* Supporting Files */,
 			);
 			path = ChallengeTests;
@@ -657,7 +651,6 @@
 				5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */,
 				5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
 				5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
-				5555E2881AEBF73F003CF3BB /* SoundCloudUtilsTests.m in Sources */,
 				5555E2B21AEBF9F6003CF3BB /* SCUserRequest.m in Sources */,
 				5555E29B1AEBF79D003CF3BB /* SCRequest.m in Sources */,
 			);
@@ -677,7 +670,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558BFCE91AD1B4FD0066E039 /* ChallengeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
