@@ -9,14 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class MMCollectionViewController;
-@protocol MMCollectionViewControllerDelegate <NSObject>
-- (void)collectionViewControllerDidFinishGame:(MMCollectionViewController *)controller;
-@end
-
-@interface MMCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (weak, nonatomic) id<MMCollectionViewControllerDelegate> delegate;
+@interface MMGameController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
 
 /*! Set sound cloud tracks for this collection view and use maximum kMaxDifferentItemsCount for the memory game.
  @param Array of NSDictionary objects representing a track on SoundCloud.

@@ -41,6 +41,7 @@
 		5555E3231AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */; };
 		5555E3241AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */; };
 		5555E3261AEC6372003CF3BB /* NSArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3251AEC6372003CF3BB /* NSArrayTest.m */; };
+		5555E3611AEC9321003CF3BB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E3601AEC9321003CF3BB /* CFNetwork.framework */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -52,7 +53,7 @@
 		558BFD011AD1B52B0066E039 /* Memory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 558BFCF61AD1B52B0066E039 /* Memory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		558BFD071AD1C0EE0066E039 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */; };
 		55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */; };
-		55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */; };
+		55D328441AD9AF3A00DC0311 /* MMGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D328431AD9AF3A00DC0311 /* MMGameController.m */; };
 		55D328451AD9B31900DC0311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558BFCD91AD1B4FC0066E039 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		5555E3201AEC62E2003CF3BB /* NSArray+SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SCUtils.h"; sourceTree = "<group>"; };
 		5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SCUtils.m"; sourceTree = "<group>"; };
 		5555E3251AEC6372003CF3BB /* NSArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTest.m; sourceTree = "<group>"; };
+		5555E3601AEC9321003CF3BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -168,8 +170,8 @@
 		558BFD061AD1C0EE0066E039 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		55D3283F1AD9ACD600DC0311 /* MMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMCollectionViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewCell.m; sourceTree = "<group>"; };
-		55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMCollectionViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMCollectionViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		55D328421AD9AF3A00DC0311 /* MMGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MMGameController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		55D328431AD9AF3A00DC0311 /* MMGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMGameController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6A67CC626C5116629AC77D98 /* libPods-SoundCloudUtilsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SoundCloudUtilsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D4C8CA672098738C22CD60 /* Pods-SoundCloudUtilsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloudUtilsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoundCloudUtilsTests/Pods-SoundCloudUtilsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5555E3611AEC9321003CF3BB /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +347,8 @@
 				558BFCFB1AD1B52B0066E039 /* MMShareViewController.m */,
 				55D3283F1AD9ACD600DC0311 /* MMCollectionViewCell.h */,
 				55D328401AD9ACD600DC0311 /* MMCollectionViewCell.m */,
-				55D328421AD9AF3A00DC0311 /* MMCollectionViewController.h */,
-				55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */,
+				55D328421AD9AF3A00DC0311 /* MMGameController.h */,
+				55D328431AD9AF3A00DC0311 /* MMGameController.m */,
 				5555E3131AEC14BA003CF3BB /* MMCollectionView.h */,
 				5555E3141AEC14BA003CF3BB /* MMCollectionView.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
@@ -374,6 +377,7 @@
 		5F7EA2C2B0130D23691F0A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5555E3601AEC9321003CF3BB /* CFNetwork.framework */,
 				6A67CC626C5116629AC77D98 /* libPods-SoundCloudUtilsTests.a */,
 			);
 			name = Frameworks;
@@ -688,7 +692,7 @@
 			files = (
 				55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */,
 				5555E3151AEC14BA003CF3BB /* MMCollectionView.m in Sources */,
-				55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */,
+				55D328441AD9AF3A00DC0311 /* MMGameController.m in Sources */,
 				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

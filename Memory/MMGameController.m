@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 D Gren. All rights reserved.
 //
 
-#import "MMCollectionViewController.h"
+#import "MMGameController.h"
 
 #import "MMCollectionViewCell.h"
 #import "MMCollectionView.h"
@@ -17,13 +17,12 @@ static const NSUInteger kIdenticalItemsCount = 2;
 static const NSUInteger kMaxDifferentItemsCount = 6;
 static const NSTimeInterval kAnimationDelay = 0.5;
 
-@interface MMCollectionViewController ()
-@property (strong, nonatomic) NSMutableArray *flippedIndexPaths;
-@property (strong, nonatomic) NSMutableArray *finishedIndexPaths;
+@interface MMGameController ()
+@property (strong, nonatomic) NSMutableSet *flippedIndexPaths;
 @property (copy, nonatomic) NSArray *tracks;
 @end
 
-@implementation MMCollectionViewController
+@implementation MMGameController
 
 #pragma mark Properties
 
@@ -35,23 +34,16 @@ static const NSTimeInterval kAnimationDelay = 0.5;
   _tracks = [NSArray shuffledFromArray:strippedTracks];
 }
 
-- (NSMutableArray *)flippedIndexPaths {
+- (NSMutableSet *)flippedIndexPaths {
   if (!_flippedIndexPaths) {
-    _flippedIndexPaths = [NSMutableArray array];
+    _flippedIndexPaths = [NSMutableSet set];
   }
   return _flippedIndexPaths;
 }
 
-- (NSMutableArray *)finishedIndexPaths {
-  if (!_finishedIndexPaths) {
-    _finishedIndexPaths = [NSMutableArray array];
-  }
-  return _finishedIndexPaths;
-}
-
 #pragma mark Private
 
-- (NSArray *)_flippedTracksForIndexPaths:(NSArray *)indexPaths {
+- (NSArray *)_flippedTracksForIndexPaths:(NSSet *)indexPaths {
   NSMutableArray *flippedTracks = [NSMutableArray array];
   for (NSIndexPath *indexPath in indexPaths) {
     [flippedTracks addObject:self.tracks[indexPath.item]];
@@ -78,21 +70,16 @@ static const NSTimeInterval kAnimationDelay = 0.5;
 #pragma mark UICollectionViewDelegate
 
 - (void)collectionView:(MMCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-  [collectionView openCellsAtIndexPaths:@[indexPath] animated:YES completion:^(NSIndexPath *flippedIndexPath) {
+  [collectionView openCellsAtIndexPaths:[NSSet setWithObject:indexPath] animated:YES completion:^(NSIndexPath *flippedIndexPath) {
     [self.flippedIndexPaths addObject:flippedIndexPath];
     if (self.flippedIndexPaths.count == kIdenticalItemsCount) {
-      NSArray *flippedIndexPaths = [self.flippedIndexPaths copy];
+      NSSet *flippedIndexPaths = [self.flippedIndexPaths copy];
       if (![NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:flippedIndexPaths]]) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kAnimationDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
           [collectionView closeCellsAtIndexPaths:flippedIndexPaths animated:YES completion:nil];
         });
       } else {
         [collectionView fadeCellsAtIndexPaths:flippedIndexPaths animated:YES];
-        [self.finishedIndexPaths addObjectsFromArray:flippedIndexPaths];
-        if (self.finishedIndexPaths.count >= [collectionView numberOfItemsInSection:0]) {
-          id<MMCollectionViewControllerDelegate> delegate = self.delegate;
-          [delegate collectionViewControllerDidFinishGame:self];
-        }
       }
       [self.flippedIndexPaths removeAllObjects];
     }

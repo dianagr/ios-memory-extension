@@ -9,22 +9,19 @@
 #import "MMShareViewController.h"
 
 #import "MMCollectionViewCell.h"
-#import "MMCollectionViewController.h"
+#import "MMGameController.h"
 #import "MMCollectionView.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <SoundCloudUtils/SoundCloudUtils.h>
 
-@interface MMShareViewController () <MMCollectionViewControllerDelegate>
+@interface MMShareViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet MMCollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *checkImageView;
-@property (strong, nonatomic) MMCollectionViewController *collectionViewController;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *checkHeightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *checkWidthConstraint;
+@property (strong, nonatomic) MMGameController *gameController;
 @end
 
 @implementation MMShareViewController
@@ -45,19 +42,18 @@
       }];
     }
   }
-  self.collectionView.dataSource = self.collectionViewController;
-  self.collectionView.delegate = self.collectionViewController;
+  self.collectionView.dataSource = self.gameController;
+  self.collectionView.delegate = self.gameController;
   [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
 }
 
 #pragma mark Properties
 
-- (MMCollectionViewController *)collectionViewController {
-  if (!_collectionViewController) {
-    _collectionViewController = [MMCollectionViewController new];
-    _collectionViewController.delegate = self;
+- (MMGameController *)gameController {
+  if (!_gameController) {
+    _gameController = [MMGameController new];
   }
-  return _collectionViewController;
+  return _gameController;
 }
 
 #pragma mark Private
@@ -90,7 +86,7 @@
   SCUserRequest *request = [SCUserRequest newTracksListRequestForUserId:userId completion:^(NSArray *response, NSError *error) {
     dispatch_async(dispatch_get_main_queue(), ^{
       if (!error) {
-        [self.collectionViewController setTracks:response];
+        [self.gameController setTracks:response];
         [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
       } else {
         [self _setError:error];
@@ -99,22 +95,6 @@
     });
   }];
   [request resume];
-}
-
-#pragma mark MMCollectionViewControllerDelegate
-
-- (void)collectionViewControllerDidFinishGame:(MMCollectionViewController *)controller {
-  [UIView animateWithDuration:0.1 animations:^{
-    self.checkImageView.hidden = NO;
-    self.checkHeightConstraint.constant = 200;
-    self.checkWidthConstraint.constant = 200;
-    [self.checkImageView layoutIfNeeded];
-  } completion:^(BOOL finished) {
-    [UIView animateWithDuration:0.2 animations:^{
-      self.checkHeightConstraint.constant = 150;
-      self.checkWidthConstraint.constant = 150;
-    }];
-  }];
 }
 
 @end

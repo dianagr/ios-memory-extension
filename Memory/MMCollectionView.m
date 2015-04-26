@@ -13,17 +13,54 @@
 static const CGFloat kMMUIiewAnimationDuration = 0.2;
 static const CGFloat kMMCellFinishedAlpha = 0.7;
 
+@interface MMCollectionView ()
+@property (strong, nonatomic) UIImageView *finishedImageView;
+@property (strong, nonatomic) NSLayoutConstraint *imageWidthConstraint;
+@property (strong, nonatomic) NSMutableSet *fadedIndexPaths;
+@end
+
 @implementation MMCollectionView
 
-- (void)openCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  self.finishedImageView.hidden = YES;
+  self.finishedImageView.image = [UIImage imageNamed:@"check"];
+}
+
+- (UIImageView *)finishedImageView {
+  if (!_finishedImageView) {
+    _finishedImageView = [UIImageView new];
+    _finishedImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self addSubview:_finishedImageView];
+    
+    _finishedImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_finishedImageView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
+    _imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:75];
+    [self addConstraint:_imageWidthConstraint];
+  }
+  return _finishedImageView;
+}
+
+- (NSMutableSet *)fadedIndexPaths {
+  if (!_fadedIndexPaths) {
+    _fadedIndexPaths = [NSMutableSet set];
+  }
+  return _fadedIndexPaths;
+}
+
+#pragma mark Public
+
+- (void)openCellsAtIndexPaths:(NSSet *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   [self _flipCells:YES atIndexPaths:indexPaths animated:animated completion:completion];
 }
 
-- (void)closeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+- (void)closeCellsAtIndexPaths:(NSSet *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   [self _flipCells:NO atIndexPaths:indexPaths animated:animated completion:completion];
 }
 
-- (void)fadeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated {
+- (void)fadeCellsAtIndexPaths:(NSSet *)indexPaths animated:(BOOL)animated {
   for (NSIndexPath *indexPath in indexPaths) {
     MMCollectionViewCell *cell = (MMCollectionViewCell *)[self cellForItemAtIndexPath:indexPath];
     if (animated) {
@@ -33,12 +70,29 @@ static const CGFloat kMMCellFinishedAlpha = 0.7;
     } else {
       cell.alpha = kMMCellFinishedAlpha;
     }
+    [self.fadedIndexPaths addObject:indexPath];
+  }
+  if (self.fadedIndexPaths.count >= [self numberOfItemsInSection:0]) {
+    [self _finishGameAnimated:animated];
   }
 }
 
 #pragma mark Private
 
-- (void)_flipCells:(BOOL)opened atIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
+- (void)_finishGameAnimated:(BOOL)animated {
+  [UIView animateWithDuration:0.1 animations:^{
+    self.finishedImageView.hidden = NO;
+    self.imageWidthConstraint.constant = 200;
+    [self.finishedImageView layoutIfNeeded];
+  } completion:^(BOOL finished) {
+    [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
+      self.imageWidthConstraint.constant = 150;
+      [self.finishedImageView layoutIfNeeded];
+    }];
+  }];
+}
+
+- (void)_flipCells:(BOOL)opened atIndexPaths:(NSSet *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   for (NSIndexPath *indexPath in indexPaths) {
     MMCollectionViewCell *cell = (MMCollectionViewCell *)[self cellForItemAtIndexPath:indexPath];
     if (cell.flippedUp != opened) {
