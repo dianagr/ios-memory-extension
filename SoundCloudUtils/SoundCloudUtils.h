@@ -16,11 +16,9 @@ FOUNDATION_EXPORT const unsigned char SoundCloudUtilsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SoundCloudUtils/PublicHeader.h>
 
-#import <SoundCloudUtils/SCAPI.h>
-#import <SoundCloudUtils/NSDictionary+SCAPI.h>
 #import <SoundCloudUtils/SCRequest.h>
 #import <SoundCloudUtils/SCResolveRequest.h>
 #import <SoundCloudUtils/SCUserRequest.h>
-#import <SoundCloudUtils/NSURL+SCUtils.h>
 #import <SoundCloudUtils/SCImageLoader.h>
 #import <SoundCloudUtils/NSArray+SCUtils.h>
+#import <SoundCloudUtils/NSDictionary+SCAPI.h>

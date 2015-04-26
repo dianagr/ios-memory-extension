@@ -52,8 +52,8 @@
 }
 
 - (void)testJSONError {
-  NSString *string = @"This some bad formatted JSON";
-  [self _stubWithResponse:[OHHTTPStubsResponse responseWithData:[NSKeyedArchiver archivedDataWithRootObject:string] statusCode:200 headers:nil]];
+  NSData *badJSON = [@"This some bad formatted JSON" dataUsingEncoding:NSUTF8StringEncoding];
+  [self _stubWithResponse:[OHHTTPStubsResponse responseWithData:badJSON statusCode:200 headers:nil]];
   XCTestExpectation *expectation = [self expectationWithDescription:@"JSON error"];
   SCRequest *request = [SCRequest newRequestGETWithPath:nil params:nil completion:^(NSDictionary *response, NSError *error) {
     XCTAssertNotNil(error);

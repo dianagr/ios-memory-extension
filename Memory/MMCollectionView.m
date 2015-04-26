@@ -11,7 +11,12 @@
 #import "MMCollectionViewCell.h"
 
 static const CGFloat kMMUIiewAnimationDuration = 0.2;
+static const CGFloat kMMUIiewAnimationDurationFast = 0.1;
 static const CGFloat kMMCellFinishedAlpha = 0.7;
+
+static const CGFloat kCheckMarkSmall = 75;
+static const CGFloat kCheckMarkExpanded = 200;
+static const CGFloat kCheckMarkNormal = 150;
 
 @interface MMCollectionView ()
 @property (strong, nonatomic) UIImageView *finishedImageView;
@@ -27,6 +32,8 @@ static const CGFloat kMMCellFinishedAlpha = 0.7;
   self.finishedImageView.image = [UIImage imageNamed:@"check"];
 }
 
+#pragma mark Properties
+
 - (UIImageView *)finishedImageView {
   if (!_finishedImageView) {
     _finishedImageView = [UIImageView new];
@@ -37,7 +44,7 @@ static const CGFloat kMMCellFinishedAlpha = 0.7;
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_finishedImageView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
-    _imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:75];
+    _imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_finishedImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:kCheckMarkSmall];
     [self addConstraint:_imageWidthConstraint];
   }
   return _finishedImageView;
@@ -79,14 +86,15 @@ static const CGFloat kMMCellFinishedAlpha = 0.7;
 
 #pragma mark Private
 
+//! Display a check mark when game is finished
 - (void)_finishGameAnimated:(BOOL)animated {
-  [UIView animateWithDuration:0.1 animations:^{
+  [UIView animateWithDuration:kMMUIiewAnimationDurationFast animations:^{
     self.finishedImageView.hidden = NO;
-    self.imageWidthConstraint.constant = 200;
+    self.imageWidthConstraint.constant = kCheckMarkExpanded;
     [self.finishedImageView layoutIfNeeded];
   } completion:^(BOOL finished) {
     [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
-      self.imageWidthConstraint.constant = 150;
+      self.imageWidthConstraint.constant = kCheckMarkNormal;
       [self.finishedImageView layoutIfNeeded];
     }];
   }];
