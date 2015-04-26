@@ -43,6 +43,7 @@
 		5555E3611AEC9321003CF3BB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E3601AEC9321003CF3BB /* CFNetwork.framework */; };
 		5555E3621AEC98EC003CF3BB /* SCAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2941AEBF77C003CF3BB /* SCAPI.m */; };
 		5555E3631AEC98EC003CF3BB /* SCAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E2941AEBF77C003CF3BB /* SCAPI.m */; };
+		5555E3651AEC9C77003CF3BB /* SCUserRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3641AEC9C77003CF3BB /* SCUserRequestTest.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -151,6 +152,8 @@
 		5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SCUtils.m"; sourceTree = "<group>"; };
 		5555E3251AEC6372003CF3BB /* NSArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSArrayTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5555E3601AEC9321003CF3BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5555E3641AEC9C77003CF3BB /* SCUserRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUserRequestTest.m; sourceTree = "<group>"; };
+		5555E3661AEC9F9E003CF3BB /* SCRequestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRequestTest.h; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -261,8 +264,10 @@
 			children = (
 				5555E2851AEBF73F003CF3BB /* Supporting Files */,
 				5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */,
-				5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */,
 				5555E3251AEC6372003CF3BB /* NSArrayTest.m */,
+				5555E3661AEC9F9E003CF3BB /* SCRequestTest.h */,
+				5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */,
+				5555E3641AEC9C77003CF3BB /* SCUserRequestTest.m */,
 			);
 			path = SoundCloudUtilsTests;
 			sourceTree = "<group>";
@@ -665,6 +670,7 @@
 				5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */,
 				5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
 				5555E3631AEC98EC003CF3BB /* SCAPI.m in Sources */,
+				5555E3651AEC9C77003CF3BB /* SCUserRequestTest.m in Sources */,
 				5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
 				5555E2B21AEBF9F6003CF3BB /* SCUserRequest.m in Sources */,
 				5555E29B1AEBF79D003CF3BB /* SCRequest.m in Sources */,
