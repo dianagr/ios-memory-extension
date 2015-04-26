@@ -23,7 +23,7 @@
 
 + (BOOL)isEqualAllItems:(NSArray *)items {
   NSSet *itemSet = [NSSet setWithArray:items];
-  return itemSet.count == 1;
+  return itemSet.count <= 1;
 }
 
 + (NSArray *)subarrayFromArray:(NSArray *)array maxRange:(NSRange)range {

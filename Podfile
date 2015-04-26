@@ -4,4 +4,5 @@ platform :ios, '8.0'
 
 target :SoundCloudUtilsTests do
 	pod 'OHHTTPStubs', '~> 4.0.0'
+	pod 'Fox', '~> 1.0.0'
 end

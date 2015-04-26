@@ -19,7 +19,7 @@
   if (queryString) {
     urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"?%@", queryString]];
   }
-  return [NSURL URLWithString:urlString];
+  return [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 }
 
 #pragma mark Private

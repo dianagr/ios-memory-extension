@@ -10,6 +10,8 @@
 
 #import "NSArray+SCUtils.h"
 
+#import <Fox/Fox.h>
+
 @interface NSArrayTest : XCTestCase
 
 @end
@@ -27,7 +29,18 @@
 }
 
 - (void)testIsEqual {
-  
+  id<FOXGenerator> arraysOfIntegers = FOXArray(FOXInteger()); // Generate random variable-size arrays of randomly generated integers
+  FOXAssert(FOXForAll(arraysOfIntegers, ^BOOL(NSArray *array) {
+    NSNumber *previous = nil;
+    for (NSNumber *number in array) {
+      if (!previous || [number isEqualToNumber:previous]) {
+        previous = number;
+      } else {
+        return ![NSArray isEqualAllItems:array];
+      }
+    }
+    return [NSArray isEqualAllItems:array];
+  }));
 }
 
 @end
