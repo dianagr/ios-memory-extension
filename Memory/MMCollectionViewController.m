@@ -19,6 +19,7 @@ static const NSTimeInterval kAnimationDelay = 0.5;
 
 @interface MMCollectionViewController ()
 @property (strong, nonatomic) NSMutableArray *flippedIndexPaths;
+@property (strong, nonatomic) NSMutableArray *finishedIndexPaths;
 @property (copy, nonatomic) NSArray *tracks;
 @end
 
@@ -39,6 +40,13 @@ static const NSTimeInterval kAnimationDelay = 0.5;
     _flippedIndexPaths = [NSMutableArray array];
   }
   return _flippedIndexPaths;
+}
+
+- (NSMutableArray *)finishedIndexPaths {
+  if (!_finishedIndexPaths) {
+    _finishedIndexPaths = [NSMutableArray array];
+  }
+  return _finishedIndexPaths;
 }
 
 #pragma mark Private
@@ -80,6 +88,11 @@ static const NSTimeInterval kAnimationDelay = 0.5;
         });
       } else {
         [collectionView fadeCellsAtIndexPaths:flippedIndexPaths animated:YES];
+        [self.finishedIndexPaths addObjectsFromArray:flippedIndexPaths];
+        if (self.finishedIndexPaths.count >= [collectionView numberOfItemsInSection:0]) {
+          id<MMCollectionViewControllerDelegate> delegate = self.delegate;
+          [delegate collectionViewControllerDidFinishGame:self];
+        }
       }
       [self.flippedIndexPaths removeAllObjects];
     }

@@ -15,13 +15,16 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <SoundCloudUtils/SoundCloudUtils.h>
 
-@interface MMShareViewController ()
+@interface MMShareViewController () <MMCollectionViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet MMCollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *checkImageView;
 @property (strong, nonatomic) MMCollectionViewController *collectionViewController;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *checkHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *checkWidthConstraint;
 @end
 
 @implementation MMShareViewController
@@ -52,6 +55,7 @@
 - (MMCollectionViewController *)collectionViewController {
   if (!_collectionViewController) {
     _collectionViewController = [MMCollectionViewController new];
+    _collectionViewController.delegate = self;
   }
   return _collectionViewController;
 }
@@ -95,6 +99,22 @@
     });
   }];
   [request resume];
+}
+
+#pragma mark MMCollectionViewControllerDelegate
+
+- (void)collectionViewControllerDidFinishGame:(MMCollectionViewController *)controller {
+  [UIView animateWithDuration:0.1 animations:^{
+    self.checkImageView.hidden = NO;
+    self.checkHeightConstraint.constant = 200;
+    self.checkWidthConstraint.constant = 200;
+    [self.checkImageView layoutIfNeeded];
+  } completion:^(BOOL finished) {
+    [UIView animateWithDuration:0.2 animations:^{
+      self.checkHeightConstraint.constant = 150;
+      self.checkWidthConstraint.constant = 150;
+    }];
+  }];
 }
 
 @end

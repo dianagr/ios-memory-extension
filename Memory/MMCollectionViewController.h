@@ -11,7 +11,7 @@
 
 @class MMCollectionViewController;
 @protocol MMCollectionViewControllerDelegate <NSObject>
-- (void)collectionViewController:(MMCollectionViewController *)controller didSelectIndexPath:(NSIndexPath *)indexPath;
+- (void)collectionViewControllerDidFinishGame:(MMCollectionViewController *)controller;
 @end
 
 @interface MMCollectionViewController : NSObject <UICollectionViewDataSource, UICollectionViewDelegate>
