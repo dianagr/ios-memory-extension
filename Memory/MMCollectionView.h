@@ -26,4 +26,11 @@ typedef void(^FlippedIndexPathCompletion)(NSIndexPath *indexPath);
  */
 - (void)closeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion;
 
+/*! Fade cells at specified index paths.
+ @param indexPaths Array of NSIndexPath objects that should fade.
+ @param animated Whether fading the cells should animate.
+ @param completion Called upon completion.
+ */
+- (void)fadeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated;
+
 @end

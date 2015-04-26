@@ -11,6 +11,7 @@
 #import "MMCollectionViewCell.h"
 
 static const CGFloat kMMUIiewAnimationDuration = 0.2;
+static const CGFloat kMMCellFinishedAlpha = 0.7;
 
 @implementation MMCollectionView
 
@@ -20,6 +21,19 @@ static const CGFloat kMMUIiewAnimationDuration = 0.2;
 
 - (void)closeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated completion:(FlippedIndexPathCompletion)completion {
   [self _flipCells:NO atIndexPaths:indexPaths animated:animated completion:completion];
+}
+
+- (void)fadeCellsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated {
+  for (NSIndexPath *indexPath in indexPaths) {
+    MMCollectionViewCell *cell = (MMCollectionViewCell *)[self cellForItemAtIndexPath:indexPath];
+    if (animated) {
+      [UIView animateWithDuration:kMMUIiewAnimationDuration animations:^{
+        cell.alpha = kMMCellFinishedAlpha;
+      }];
+    } else {
+      cell.alpha = kMMCellFinishedAlpha;
+    }
+  }
 }
 
 #pragma mark Private

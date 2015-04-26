@@ -14,7 +14,7 @@
 #import <SoundCloudUtils/SoundCloudUtils.h>
 
 static const NSUInteger kIdenticalItemsCount = 2;
-static const NSUInteger kMaxDifferentItemsCount = 4;
+static const NSUInteger kMaxDifferentItemsCount = 6;
 static const NSTimeInterval kAnimationDelay = 0.5;
 
 @interface MMCollectionViewController ()
@@ -73,11 +73,13 @@ static const NSTimeInterval kAnimationDelay = 0.5;
   [collectionView openCellsAtIndexPaths:@[indexPath] animated:YES completion:^(NSIndexPath *flippedIndexPath) {
     [self.flippedIndexPaths addObject:flippedIndexPath];
     if (self.flippedIndexPaths.count == kIdenticalItemsCount) {
-      if (![NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:self.flippedIndexPaths]]) {
-        NSArray *flippedIndexPaths = [self.flippedIndexPaths copy];
+      NSArray *flippedIndexPaths = [self.flippedIndexPaths copy];
+      if (![NSArray isEqualAllItems:[self _flippedTracksForIndexPaths:flippedIndexPaths]]) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kAnimationDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
           [collectionView closeCellsAtIndexPaths:flippedIndexPaths animated:YES completion:nil];
         });
+      } else {
+        [collectionView fadeCellsAtIndexPaths:flippedIndexPaths animated:YES];
       }
       [self.flippedIndexPaths removeAllObjects];
     }
