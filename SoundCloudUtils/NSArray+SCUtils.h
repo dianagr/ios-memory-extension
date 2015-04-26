@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (MMUtils)
+@interface NSArray (SCUtils)
 
 /*! Create a new array with the items shuffled.
  @param .

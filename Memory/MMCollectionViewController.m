@@ -9,7 +9,6 @@
 #import "MMCollectionViewController.h"
 
 #import "MMCollectionViewCell.h"
-#import "NSArray+MMUtils.h"
 #import "MMCollectionView.h"
 
 #import <SoundCloudUtils/SoundCloudUtils.h>

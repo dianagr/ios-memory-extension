@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2262DC0DA6F52E18C30AA668 /* libPods-SoundCloudUtilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A67CC626C5116629AC77D98 /* libPods-SoundCloudUtilsTests.a */; };
-		5510CFFB1AE7192B00A6EB9A /* NSArray+MMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5510CFFA1AE7192B00A6EB9A /* NSArray+MMUtils.m */; };
 		5555E2791AEBF73F003CF3BB /* SoundCloudUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5555E28B1AEBF73F003CF3BB /* SoundCloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; };
 		5555E28C1AEBF73F003CF3BB /* SoundCloudUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,6 +37,10 @@
 		5555E3171AEC2A0B003CF3BB /* SCRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */; };
 		5555E31E1AEC531C003CF3BB /* NSDictionary+SCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E31C1AEC531C003CF3BB /* NSDictionary+SCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5555E31F1AEC531C003CF3BB /* NSDictionary+SCAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E31D1AEC531C003CF3BB /* NSDictionary+SCAPI.m */; };
+		5555E3221AEC62E2003CF3BB /* NSArray+SCUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5555E3201AEC62E2003CF3BB /* NSArray+SCUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5555E3231AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */; };
+		5555E3241AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */; };
+		5555E3261AEC6372003CF3BB /* NSArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5555E3251AEC6372003CF3BB /* NSArrayTest.m */; };
 		558BFCCF1AD1B4FC0066E039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCCE1AD1B4FC0066E039 /* main.m */; };
 		558BFCD21AD1B4FC0066E039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD11AD1B4FC0066E039 /* AppDelegate.m */; };
 		558BFCD51AD1B4FC0066E039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 558BFCD41AD1B4FC0066E039 /* ViewController.m */; };
@@ -118,8 +121,6 @@
 
 /* Begin PBXFileReference section */
 		10FCC5015184DF9DAED5C581 /* Pods-SoundCloudUtilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloudUtilsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoundCloudUtilsTests/Pods-SoundCloudUtilsTests.release.xcconfig"; sourceTree = "<group>"; };
-		5510CFF91AE7192B00A6EB9A /* NSArray+MMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSArray+MMUtils.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5510CFFA1AE7192B00A6EB9A /* NSArray+MMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSArray+MMUtils.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5555E2741AEBF73F003CF3BB /* SoundCloudUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SoundCloudUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5555E2771AEBF73F003CF3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5555E2781AEBF73F003CF3BB /* SoundCloudUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundCloudUtils.h; sourceTree = "<group>"; };
@@ -144,6 +145,9 @@
 		5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCRequestTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5555E31C1AEC531C003CF3BB /* NSDictionary+SCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSDictionary+SCAPI.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5555E31D1AEC531C003CF3BB /* NSDictionary+SCAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSDictionary+SCAPI.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5555E3201AEC62E2003CF3BB /* NSArray+SCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SCUtils.h"; sourceTree = "<group>"; };
+		5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SCUtils.m"; sourceTree = "<group>"; };
+		5555E3251AEC6372003CF3BB /* NSArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTest.m; sourceTree = "<group>"; };
 		558BFCC91AD1B4FC0066E039 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558BFCCD1AD1B4FC0066E039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558BFCCE1AD1B4FC0066E039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -227,6 +231,8 @@
 				5555E2981AEBF79D003CF3BB /* SCRequest.m */,
 				5555E2A41AEBF980003CF3BB /* NSURL+SCUtils.h */,
 				5555E2A51AEBF980003CF3BB /* NSURL+SCUtils.m */,
+				5555E3201AEC62E2003CF3BB /* NSArray+SCUtils.h */,
+				5555E3211AEC62E2003CF3BB /* NSArray+SCUtils.m */,
 				5555E2A91AEBF9C2003CF3BB /* SCResolveRequest.h */,
 				5555E2AA1AEBF9C2003CF3BB /* SCResolveRequest.m */,
 				5555E2AE1AEBF9F6003CF3BB /* SCUserRequest.h */,
@@ -252,6 +258,7 @@
 				5555E2851AEBF73F003CF3BB /* Supporting Files */,
 				5555E2B61AEBFDFA003CF3BB /* NSURLTest.m */,
 				5555E3161AEC2A0B003CF3BB /* SCRequestTest.m */,
+				5555E3251AEC6372003CF3BB /* NSArrayTest.m */,
 			);
 			path = SoundCloudUtilsTests;
 			sourceTree = "<group>";
@@ -341,8 +348,6 @@
 				55D328431AD9AF3A00DC0311 /* MMCollectionViewController.m */,
 				5555E3131AEC14BA003CF3BB /* MMCollectionView.h */,
 				5555E3141AEC14BA003CF3BB /* MMCollectionView.m */,
-				5510CFF91AE7192B00A6EB9A /* NSArray+MMUtils.h */,
-				5510CFFA1AE7192B00A6EB9A /* NSArray+MMUtils.m */,
 				558BFCFD1AD1B52B0066E039 /* MainInterface.storyboard */,
 				55F0357D1AD62EB100C0D4ED /* Frameworks */,
 				558BFCF81AD1B52B0066E039 /* Supporting Files */,
@@ -390,6 +395,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5555E3221AEC62E2003CF3BB /* NSArray+SCUtils.h in Headers */,
 				5555E31E1AEC531C003CF3BB /* NSDictionary+SCAPI.h in Headers */,
 				5555E2A61AEBF980003CF3BB /* NSURL+SCUtils.h in Headers */,
 				5555E2791AEBF73F003CF3BB /* SoundCloudUtils.h in Headers */,
@@ -634,6 +640,7 @@
 			files = (
 				5555E31F1AEC531C003CF3BB /* NSDictionary+SCAPI.m in Sources */,
 				5555E2AC1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
+				5555E3231AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */,
 				5555E2A71AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
 				5555E2961AEBF77C003CF3BB /* SCAPI.m in Sources */,
 				5555E2B11AEBF9F6003CF3BB /* SCUserRequest.m in Sources */,
@@ -648,6 +655,8 @@
 			files = (
 				5555E2BE1AEC00F4003CF3BB /* SCImageLoader.m in Sources */,
 				5555E3171AEC2A0B003CF3BB /* SCRequestTest.m in Sources */,
+				5555E3241AEC62E2003CF3BB /* NSArray+SCUtils.m in Sources */,
+				5555E3261AEC6372003CF3BB /* NSArrayTest.m in Sources */,
 				5555E2B71AEBFDFA003CF3BB /* NSURLTest.m in Sources */,
 				5555E2AD1AEBF9C2003CF3BB /* SCResolveRequest.m in Sources */,
 				5555E2A81AEBF980003CF3BB /* NSURL+SCUtils.m in Sources */,
@@ -680,7 +689,6 @@
 				55D328411AD9ACD600DC0311 /* MMCollectionViewCell.m in Sources */,
 				5555E3151AEC14BA003CF3BB /* MMCollectionView.m in Sources */,
 				55D328441AD9AF3A00DC0311 /* MMCollectionViewController.m in Sources */,
-				5510CFFB1AE7192B00A6EB9A /* NSArray+MMUtils.m in Sources */,
 				558BFCFC1AD1B52B0066E039 /* MMShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 D Gren. All rights reserved.
 //
 
-#import "NSArray+MMUtils.h"
+#import "NSArray+SCUtils.h"
 
-@implementation NSArray (MMUtils)
+@implementation NSArray (SCUtils)
 
 + (NSArray *)shuffledFromArray:(NSArray *)array {
   NSMutableArray *mutableItems = [array mutableCopy];
@@ -29,9 +29,10 @@
 + (NSArray *)subarrayFromArray:(NSArray *)array maxRange:(NSRange)range {
   if (array.count > range.location + range.length) {
     return [array subarrayWithRange:range];
-  } else {
+  } else if (range.location < array.count) {
     return [array subarrayWithRange:NSMakeRange(range.location, array.count - range.location)];
   }
+  return nil;
 }
 
 @end

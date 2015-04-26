@@ -23,3 +23,4 @@ FOUNDATION_EXPORT const unsigned char SoundCloudUtilsVersionString[];
 #import <SoundCloudUtils/SCUserRequest.h>
 #import <SoundCloudUtils/NSURL+SCUtils.h>
 #import <SoundCloudUtils/SCImageLoader.h>
+#import <SoundCloudUtils/NSArray+SCUtils.h>

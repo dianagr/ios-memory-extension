@@ -10,7 +10,6 @@
 
 #import "MMCollectionViewCell.h"
 #import "MMCollectionViewController.h"
-#import "NSArray+MMUtils.h"
 #import "MMCollectionView.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -46,7 +45,6 @@
   self.collectionView.dataSource = self.collectionViewController;
   self.collectionView.delegate = self.collectionViewController;
   [self.collectionView registerClass:[MMCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([MMCollectionViewCell class])];
-
 }
 
 #pragma mark Properties
